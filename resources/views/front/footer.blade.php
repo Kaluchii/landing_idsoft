@@ -61,7 +61,7 @@
                 </div>
                 <div class="become__col-1-2">
                     <div class="become__img-wrap become__img-wrap--100"><img src="/img/bocal.png" alt="" class="become__img"></div>
-                    <div class="become__img-wrap"><img src="/img/arrows.png" alt="" class="become__img"></div>
+                    <div class="become__img-wrap become__img-wrap--margin"><img src="/img/arrows.png" alt="" class="become__img"></div>
                     <div class="become__img-wrap"><img src="/img/zont.png" alt="" class="become__img"></div>
                 </div>
             </div>

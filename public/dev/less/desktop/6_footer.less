@@ -2,10 +2,10 @@
   &__wrap-1280{
     max-width: 1280px;
     margin: 0 auto;
-    padding: 60px 0 50px;
-    background: url("/img/left_border.png") top left no-repeat,
-                url("/img/right_border.png") top right no-repeat,
-                url("/img/cardboard.jpg") repeat-x;
+    padding-top: 50px;
+    background: url("/img/left_border.png") top left / auto 100% no-repeat,
+                url("/img/right_border.png") top right / auto 100% no-repeat,
+                url("/img/cardboard.jpg") center / auto 100% repeat-x
   }
 
   &__title{
@@ -13,20 +13,32 @@
   }
 
   &__form{
-    margin-top: 70px;
+    margin-top: 65px;
   }
 
-  &__footer{}
+  &__footer{
+    display: flex;
+    position: relative;
+    padding: 0 160px 0 150px;
+    top: -60px;
+  }
 
   &__col-1-2{
+    max-width: 250px;
     &:last-child{
+      text-align: right;
       margin-left: auto;
     }
   }
 
   &__img-wrap{
+    display: inline-block;
+    line-height: 0;
     &--100{
       width: 100%;
+    }
+    &--margin{
+      margin: 15px 15px 0 0;
     }
   }
   
@@ -37,11 +49,14 @@
     user-select: none;
   }
 
-  &__info{}
+  &__info{
+    margin-top: 40px;
+  }
 
   &__info-row{
     color: #333333;
     font-size: 14px;
+    line-height: 1.8;
   }
 
   &__info-mail{}
@@ -55,7 +70,7 @@
   }
 
   &__row{
-    margin-top: 30px;
+    margin-top: 20px;
     text-align: right;
 
     &--button{}
@@ -79,10 +94,10 @@
     width: 100%;
     max-width: 278px;
     border: 1px solid #8b7662;
-    -webkit-border-radius: 3px;
-    -moz-border-radius: 3px;
-    border-radius: 3px;
-    padding: 15px 10px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    padding: 13px 10px;
     font-size: 20px;
     margin: 3px;
 
@@ -93,6 +108,10 @@
     }
 
     &:hover{
+      border: 1px solid blue;
+    }
+
+    &:focus{
       border: 4px solid blue;
       margin: 0;
     }
@@ -100,12 +119,13 @@
 }
 
 .send-form{
-  padding: 15px 20px;
+  padding: 15px 30px;
   border: none;
   color: #ffffff;
+  cursor: pointer;
   background-color: #137cc0;
   font-weight: bold;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  border-radius: 3px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
 }
