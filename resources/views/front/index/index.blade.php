@@ -7,48 +7,55 @@
 
 
     <section class="in-stock">
-        <div class="in-stock__wrap-1280">
-            <h2 class="in-stock__title block-title">Оборудование в постоянном наличии</h2>
+        <div class="in-stock__wrap-1160">
+            <h2 class="in-stock__title">Оборудование в постоянном наличии</h2>
             <p class="in-stock__sub-title">Все позиции в наличии с собственного склада в Санкт-Петербурге. Без
                 посредников</p>
             <div class="in-stock__equipments-wrap equipments">
                 <div class="equipments__col">
                     <div class="equipments__item equipment">
-                        <img src="" alt="" class="equipment__img">
+                        <img src="/img/240.jpg" alt="" class="equipment__img">
+                        <img src="/img/shadow240.jpg" alt="" class="equipment__img-shadow">
                         <p class="equipment__title">Сенсорные моноблоки</p>
                         <p class="equipment__models-count">3 модели</p>
                     </div>
                     <div class="equipments__item equipment">
-                        <img src="" alt="" class="equipment__img">
+                        <img src="/img/240.jpg" alt="" class="equipment__img">
+                        <img src="/img/shadow240.jpg" alt="" class="equipment__img-shadow">
                         <p class="equipment__title">Сканнеры штрихкода</p>
                         <p class="equipment__models-count">3 модели</p>
                     </div>
                 </div>
-                <div class="equipments__col">
+                <div class="equipments__col equipments__col--big">
                     <div class="equipments__item equipment">
-                        <img src="" alt="" class="equipment__img">
+                        <img src="/img/500.jpg" alt="" class="equipment__img">
+                        <img src="/img/shadow500.jpg" alt="" class="equipment__img-shadow">
                         <p class="equipment__title">POS-системы</p>
                         <p class="equipment__models-count">3 модели</p>
                     </div>
                 </div>
                 <div class="equipments__col">
                     <div class="equipments__item equipment">
-                        <img src="" alt="" class="equipment__img">
+                        <img src="/img/240.jpg" alt="" class="equipment__img">
+                        <img src="/img/shadow240.jpg" alt="" class="equipment__img-shadow">
                         <p class="equipment__title">Чековые принтеры</p>
                         <p class="equipment__models-count">3 модели</p>
                     </div>
                     <div class="equipments__item equipment">
-                        <img src="" alt="" class="equipment__img">
+                        <img src="/img/240.jpg" alt="" class="equipment__img">
+                        <img src="/img/shadow240.jpg" alt="" class="equipment__img-shadow">
                         <p class="equipment__title">Принтеры этикеток</p>
                         <p class="equipment__models-count">3 модели</p>
                     </div>
                 </div>
             </div>
-            <p class="in-stock__give-commercial-proposal">
-                <a href="#" class="in-stock__give-commercial-proposal-btn">Получить коммерческое предложение</a>
-            </p>
-            <p class="in-stock__we-will-tell">Мы расскажем об условиях работы,
-                актуальные цены и о прогрессирующих скидках.</p>
+            <div class="in-stock__offer-wrap">
+                <p class="in-stock__give-commercial-proposal">
+                    <a href="#" class="in-stock__give-commercial-proposal-btn">Получить коммерческое предложение</a>
+                </p>
+                <p class="in-stock__we-will-tell">Мы расскажем об условиях работы,
+                    актуальные цены и о прогрессирующих скидках.</p>
+            </div>
         </div>
         <p class="in-stock__popularity">Мы поставляем оборудование 8 из 10 интеграторам Казахстана</p>
     </section>
@@ -56,7 +63,7 @@
 
     <section class="guarantee">
         <div class="guarantee__wrap-1280">
-            <h2 class="guarantee_title block-title">Гарантия и сервис</h2>
+            <h2 class="guarantee_title">Гарантия и сервис</h2>
             <div class="guarantee__col-1"></div>
             <div class="guarantee__col-2 support-info">
                 <div class="support-info__item">
@@ -98,7 +105,7 @@
 
 
     <section class="about">
-        <h2 class="about__title block-title">О компании</h2>
+        <h2 class="about__title">О компании</h2>
         <div class="about__facts-wrap facts">
             <div class="facts__col-1">
                 <div class="facts__item fact">
