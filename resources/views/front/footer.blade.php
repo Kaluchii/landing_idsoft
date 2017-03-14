@@ -14,7 +14,7 @@
                     <div class="partner-form__row">
                         <label class="partner-form__row-name">
                             <span class="partner-form__label">Имя</span>
-                            <input type="text" name="ask_name" required class="popup-input partner-form__input" placeholder="Имя" autofocus>
+                            <input type="text" name="ask_name" required class="popup-input partner-form__input" placeholder="Имя">
                         </label>
                     </div>
                     <div class="partner-form__row">

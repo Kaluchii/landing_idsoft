@@ -2,10 +2,10 @@
   &__wrap-1280{
     max-width: 1280px;
     margin: 0 auto;
-    padding-top: 50px;
-    background: url("/img/left_border.png") top left / auto 100% no-repeat,
-                url("/img/right_border.png") top right / auto 100% no-repeat,
-                url("/img/cardboard.jpg") center / auto 100% repeat-x
+    padding: 50px 0;
+    background: url("/img/left_border.png") top left no-repeat,
+                url("/img/right_border.png") top right no-repeat,
+                url("/img/cardboard.jpg") center repeat-x
   }
 
   &__title{
@@ -13,14 +13,15 @@
   }
 
   &__form{
-    margin-top: 65px;
+    margin-top: 35px;
   }
 
   &__footer{
     display: flex;
-    position: relative;
     padding: 0 160px 0 150px;
-    top: -60px;
+    /*position: relative;
+    top: -60px;*/
+    margin-top: -90px;
   }
 
   &__col-1-2{
@@ -59,7 +60,9 @@
     line-height: 1.8;
   }
 
-  &__info-mail{}
+  &__info-mail{
+    .link(#137cc1, rgba(19, 124, 193, 0.5), white, white);
+  }
 
 }
 
@@ -70,7 +73,7 @@
   }
 
   &__row{
-    margin-top: 20px;
+    margin-top: 15px;
     text-align: right;
 
     &--button{}
@@ -103,16 +106,16 @@
 
     &--textarea{
       resize: none;
-      height: 120px;
+      height: 50px;
       line-height: 1.2;
     }
 
     &:hover{
-      border: 1px solid blue;
+      border: 1px solid #137cc0;
     }
 
     &:focus{
-      border: 4px solid blue;
+      border: 4px solid #137cc0;
       margin: 0;
     }
   }
