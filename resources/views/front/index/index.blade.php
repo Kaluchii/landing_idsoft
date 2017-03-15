@@ -63,7 +63,7 @@
 
     <section class="guarantee">
         <div class="guarantee__wrap-1280">
-            <h2 class="guarantee_title">Гарантия и сервис</h2>
+            <h2 class="guarantee__title">Гарантия и сервис</h2>
             <div class="guarantee__col-1"></div>
             <div class="guarantee__col-2 support-info">
                 <div class="support-info__item">
