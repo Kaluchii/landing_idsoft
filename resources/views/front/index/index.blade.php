@@ -1,8 +1,35 @@
 @extends('front.layout')
 @include('front.index.meta')
 @section('content')
-    <section class="facts">
-        <div class="facts__wrap-1280"></div>
+    <section class="titular">
+        <div class="titular__blue-top">
+            <div class="titular__wrap-1280 titular__wrap-1280--background">
+                <h1 class="titular__title">Оборудование для автоматизации общепита и торговли</h1>
+                <div class="titular__advantages advantages">
+                    <div class="advantages__item">
+                        <img src="/img/price.png" alt="" class="advantages__img">
+                        <p class="advantages__text"><span class="advantages__bold-text">Лучшие цены</span>
+                            в РФ и Казахстане</p>
+                    </div>
+                    <div class="advantages__item">
+                        <img src="/img/sclad.png" alt="" class="advantages__img">
+                        <p class="advantages__text"><span class="advantages__bold-text">Собственный склад</span> в Санкт-Петербурге, Астане, Алматы</p>
+                    </div>
+                    <div class="advantages__item">
+                        <img src="/img/guarantee.png" alt="" class="advantages__img">
+                        <p class="advantages__text"><span class="advantages__bold-text">Гарантия</span> до 3-х лет</p>
+                    </div>
+                    <div class="advantages__item">
+                        <img src="/img/service.png" alt="" class="advantages__img">
+                        <p class="advantages__text"><span class="advantages__bold-text">Собственный центр</span> сервиса и поддержки</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="titular__white-bottom">
+            <div class="titular__wrap-1280">
+            </div>
+        </div>
     </section>
 
 
@@ -103,11 +130,11 @@
 
 
     <section class="about">
-        <h2 class="about__title">О компании</h2>
         <div class="about__facts-wrap facts">
-            <div class="facts__col-1">
+            <div class="facts__col-1-2">
+                <h2 class="about__title">О компании</h2>
                 <div class="facts__item fact">
-                    <img src="" alt="" class="fact__img">
+                    <img src="/img/sqr.jpg" alt="" class="fact__img">
                     <h3 class="fact__title">Собственное производство</h3>
                     <p class="fact__description">Мы сами выбираем и заказываем комплектующие с заводов Китая, а сборнкой
                         занимаются квалифицированные и ответственные сотрудники.</p>
@@ -118,15 +145,15 @@
                         компанией, на которую вы рассчитываете.</p>
                 </div>
             </div>
-            <div class="facts__col-2">
+            <div class="facts__col-1-2">
                 <div class="facts__item fact">
-                    <img src="" alt="" class="fact__img">
+                    <img src="/img/sqr.jpg" alt="" class="fact__img">
                     <h3 class="fact__title">Опыт интеграции</h3>
                     <p class="fact__description">Мы понимаем особенности автоматизации бизнеса. Это позволяет нам решить
                         многие проблемы еще до того, как они появятся.</p>
                 </div>
                 <div class="facts__item fact">
-                    <img src="" alt="" class="fact__img">
+                    <img src="/img/sqr.jpg" alt="" class="fact__img">
                     <h3 class="fact__title">Лицом к партнерам</h3>
                     <p class="fact__description">Нашим партнерам не нужно выполнять план продаж, дожидаться очереди или
                         заказывать не нужный объем. Мы стремимся к честному и прозрачному сотрудничеству.</p>

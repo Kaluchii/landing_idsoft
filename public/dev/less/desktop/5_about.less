@@ -1,0 +1,57 @@
+.about{
+  &__title{
+    line-height: 1;
+  }
+
+  &__facts-wrap{
+    max-width: 880px;
+    margin: 0 auto;
+    padding: 50px 40px 85px;
+  }
+}
+
+
+.facts{
+  display: flex;
+  justify-content: space-between;
+
+  &__col-1-2{
+    max-width: 380px;
+    &:last-child{
+      margin-top: 10px;
+    }
+  }
+
+  &__item{
+    &:not(:first-child){
+      margin-top: 130px;
+    }
+  }
+
+  &__reputation{
+    margin-top: 150px;
+    text-align: center;
+  }
+
+  &__img{}
+
+  &__reputation-text{
+    margin-top: 25px;
+    font-size: 20px;
+    color: #333333;
+  }
+}
+
+
+.fact{
+  &__img{}
+
+  &__title{
+    margin-top: 20px;
+    font-size: 24px;
+  }
+
+  &__description{
+    margin-top: 15px;
+  }
+}
