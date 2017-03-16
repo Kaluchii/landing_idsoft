@@ -36,6 +36,7 @@
 
   &__mailto{
     .link(#137cc1, rgba(19, 124, 193, 0.5), green, green);
+    display: inline-block;
   }
 
   &__become-partner{
@@ -46,6 +47,58 @@
     color: #333333;
     font-family: @bold;
     padding: 15px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    background-color: #FDC755;
+  }
+}
+
+
+
+.sticky-header{
+  position: fixed;
+  top: 0;
+  z-index: 9;
+  width: 100%;
+  display: none;
+  background-color: #191919;
+  &__wrap-1180{
+    max-width: 1180px;
+    margin: 0 auto;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 20px 35px 20px 45px;
+  }
+
+  &__tagline{
+    color: #cccccc;
+  }
+
+  &__communications{
+    margin-left: 20px;
+  }
+
+  &__phone{
+    color: #FFFFFF;
+    font-family: @bold;
+    margin-left: 20px;
+  }
+
+  &__mailto{
+    .link(#fdc755, rgba(253, 199, 85, 0.3), green, green);
+    display: inline-block;
+    line-height: 1.2;
+  }
+
+  &__become-partner-btn{
+    color: #333333;
+    font-family: @bold;
+    padding: 12px 14px;
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
     border-radius: 3px;

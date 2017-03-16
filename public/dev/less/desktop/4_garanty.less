@@ -1,36 +1,68 @@
 .guarantee{
   background-color: #20282c;
-  padding: 100px 40px 60px;
 
-  &__wrap-1280{}
+  &__wrap-1280{
+    max-width: 1280px;
+    margin: 0 auto;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 100px 40px 60px;
+  }
 
   &__title{
+    width: 100%;
+    text-align: center;
     color: #FFFFFF;
   }
 
-  &__col-1{}
+  &__col-1{
+    max-width: 700px;
+    margin-top: 65px;
+  }
 
-  &__col-2{}
+  &__col-2{
+    max-width: 400px;
+    margin-top: 65px;
+    margin-left: 80px;
+  }
 
   &__communications{}
 }
 
 
 .support-info{
-  &__item{}
+  &__item{
+    &:not(:first-child){
+      margin-top: 30px;
+    }
+  }
 
-  &__title{}
+  &__title{
+    color: #fdc755;
+    font-size: 24px;
+  }
 
-  &__description{}
+  &__description{
+    margin-top: 15px;
+    color: #FFFFFF;
+  }
 }
 
 
-.communications-row{
-  &__wrap-1280{}
 
-  &__tagline{}
-
-  &__tel-mail{}
-
-  &__mailto{}
+.fotorama{
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  &__stage{
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+  }
+  &__img{
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+  }
 }

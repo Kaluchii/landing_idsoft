@@ -64,7 +64,18 @@
     <section class="guarantee">
         <div class="guarantee__wrap-1280">
             <h2 class="guarantee__title">Гарантия и сервис</h2>
-            <div class="guarantee__col-1"></div>
+            <div class="guarantee__col-1">
+                <div class="fotorama" data-loop="true" data-autoplay="5000">
+                    <img src="/img/slide.jpg" alt="">
+                    <img src="/img/slide.jpg" alt="">
+                    <img src="/img/slide.jpg" alt="">
+                    <img src="/img/slide.jpg" alt="">
+                    <img src="/img/slide.jpg" alt="">
+                    <img src="/img/slide.jpg" alt="">
+                    <img src="/img/slide.jpg" alt="">
+                    <img src="/img/slide.jpg" alt="">
+                </div>
+            </div>
             <div class="guarantee__col-2 support-info">
                 <div class="support-info__item">
                     <h3 class="support-info__title">Гарантия до 3х лет</h3>
@@ -85,19 +96,6 @@
                         полный арсенал запасных частей для каждой модели оборудования — мы отремонтируем, протестируем и
                         восстановим работу так быстро, насколько это возможно.
                     </p>
-                </div>
-            </div>
-        </div>
-        <div class="guarantee__communications communications-row">
-            <div class="communications-row__wrap-1280">
-                <p class="communications-row__tagline">IDSOFT — автоматизация торговли и общепита</p>
-                <div class="communications-row__tel-mail">
-                    <a href="mailto:sales@idsoft.kz" class="communications-row__mailto">sales@idsoft.kz</a>
-                    <span class="communications-row__phone">+7 (727) 220-20-00</span>
-                    <span class="communications-row__phone">+7 (747) 220-20-00</span>
-                </div>
-                <div class="communications-row__become-partner">
-                    <a href="#" class="communications-row__become-partner-btn">Стать партнером</a>
                 </div>
             </div>
         </div>

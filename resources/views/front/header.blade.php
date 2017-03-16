@@ -14,4 +14,17 @@
             </div>
         </div>
     </header>
+    <div class="sticky-header">
+        <div class="sticky-header__wrap-1180">
+            <p class="sticky-header__tagline">IDSOFT — автоматизация торговли и общепита</p>
+            <div class="sticky-header__communications">
+                <a href="mailto:spb@idsoft.info" class="sticky-header__mailto">sale@idsoft.kz</a>
+                <span class="sticky-header__phone">+7 (727) 220-20-00</span>
+                <span class="sticky-header__phone">+7 (747) 220-20-00</span>
+            </div>
+            <div class="sticky-header__become-partner">
+                <a href="#" class="sticky-header__become-partner-btn">Стать партнером</a>
+            </div>
+        </div>
+    </div>
 @endsection
