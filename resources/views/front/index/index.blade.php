@@ -32,6 +32,24 @@
                     <img src="/img/skaner.png" alt="" class="animate__img animate__img--scanner">
                     <img src="/img/printer.png" alt="" class="animate__img animate__img--printer">
                     <img src="/img/monitor.png" alt="" class="animate__img animate__img--sensor">
+
+                    {{--<div class="advantages__item">
+                        <img src="/img/price.png" alt="" class="advantages__img">
+                        <p class="advantages__text"><span class="advantages__bold-text">Лучшие цены</span><br>
+                            в РФ и Казахстане</p>
+                    </div>
+                    <div class="advantages__item">
+                        <img src="/img/sclad.png" alt="" class="advantages__img">
+                        <p class="advantages__text"><span class="advantages__bold-text">Собственный склад</span><br>в Санкт-Петербурге, Астане, Алматы</p>
+                    </div>
+                    <div class="advantages__item">
+                        <img src="/img/guarantee.png" alt="" class="advantages__img">
+                        <p class="advantages__text"><span class="advantages__bold-text">Гарантия</span><br>до 3-х лет</p>
+                    </div>
+                    <div class="advantages__item">
+                        <img src="/img/service.png" alt="" class="advantages__img">
+                        <p class="advantages__text"><span class="advantages__bold-text">Собственный<br>центр</span> сервиса и поддержки</p>
+                    </div>--}}
                 </div>
             </div>
         </div>

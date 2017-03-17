@@ -36,7 +36,7 @@
   }
 
   &__mailto{
-    .link(#137cc1, rgba(19, 124, 193, 0.5), green, green);
+    .link(#137cc1, rgba(19, 124, 193, 0.5), #CC0000, rgba(204, 0, 0, 0.5));
     display: inline-block;
   }
 
@@ -52,6 +52,10 @@
     -moz-border-radius: 3px;
     border-radius: 3px;
     background-color: #FDC755;
+
+    &:hover{
+      background-color: lighten(#FDC755, 8%);
+    }
   }
 }
 
@@ -59,10 +63,10 @@
 
 .sticky-header{
   position: fixed;
+  display: none;
   top: 0;
   z-index: 9;
   width: 100%;
-  display: none;
   background-color: #191919;
   &__wrap-1180{
     max-width: 1180px;
@@ -91,7 +95,7 @@
   }
 
   &__mailto{
-    .link(#fdc755, rgba(253, 199, 85, 0.3), green, green);
+    .link(#fdc755, rgba(253, 199, 85, 0.3), lighten(#fde056, 8%), rgba(253, 224, 86, 0.3));
     display: inline-block;
     line-height: 1.2;
   }
@@ -104,5 +108,9 @@
     -moz-border-radius: 3px;
     border-radius: 3px;
     background-color: #FDC755;
+
+    &:hover{
+      background-color: lighten(#FDC755, 8%);
+    }
   }
 }
