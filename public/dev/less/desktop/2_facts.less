@@ -1,5 +1,4 @@
 .titular{
-  transition: opacity 1s ease-out 0.5s, top 1s ease-out 0.5s;
   &__blue-top{
     background-color: #0071bc;
   }
@@ -9,9 +8,7 @@
     margin: 0 auto;
 
     &--background{
-      background: url("/img/top-gradient.png") no-repeat center top,
-                  url("/img/pockets.png") no-repeat 20px bottom,
-                  url("/img/bludo.png") no-repeat ~'calc(100% - 30px)' ~'calc(100% - 25px)';
+      background: url("/img/top-gradient.png") no-repeat center top;
       padding: 40px 0 35px;
     }
   }
@@ -68,19 +65,53 @@
   &__img{
     position: absolute;
 
+    &--pockets{
+      bottom: 80px;
+      left: 20px;
+      transition: opacity 1s ease-out 0.5s;
+
+      &-animated{}
+    }
+
+    &--bludo{
+      bottom: 120px;
+      right: 30px;
+      transition: opacity 1s ease-out 0.5s;
+
+      &-animated{}
+    }
+
     &--scanner{
       bottom: 30px;
       left: 200px;
+      transition: opacity 1s ease-out 0.5s;
+      opacity: 0;
+
+      &-animated{
+        opacity: 1;
+      }
     }
 
     &--printer{
       bottom: 0;
       left: 40px;
+      transition: opacity 1s ease-out 0.5s;
+      opacity: 0;
+
+      &-animated{
+        opacity: 1;
+      }
     }
 
     &--sensor{
       bottom: 20px;
       right: 150px;
+      transition: opacity 1s ease-out 0.5s;
+      opacity: 0;
+
+      &-animated{
+        opacity: 1;
+      }
     }
   }
 }

@@ -29,6 +29,8 @@
         <div class="titular__white-bottom">
             <div class="titular__wrap-1280">
                 <div class="titular__animate animate">
+                    <img src="/img/pockets.png" alt="" class="animate__img animate__img--pockets">
+                    <img src="/img/bludo.png" alt="" class="animate__img animate__img--bludo">
                     <img src="/img/skaner.png" alt="" class="animate__img animate__img--scanner">
                     <img src="/img/printer.png" alt="" class="animate__img animate__img--printer">
                     <img src="/img/monitor.png" alt="" class="animate__img animate__img--sensor">
