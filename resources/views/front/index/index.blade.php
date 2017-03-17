@@ -8,26 +8,31 @@
                 <div class="titular__advantages advantages">
                     <div class="advantages__item">
                         <img src="/img/price.png" alt="" class="advantages__img">
-                        <p class="advantages__text"><span class="advantages__bold-text">Лучшие цены</span>
+                        <p class="advantages__text"><span class="advantages__bold-text">Лучшие цены</span><br>
                             в РФ и Казахстане</p>
                     </div>
                     <div class="advantages__item">
                         <img src="/img/sclad.png" alt="" class="advantages__img">
-                        <p class="advantages__text"><span class="advantages__bold-text">Собственный склад</span> в Санкт-Петербурге, Астане, Алматы</p>
+                        <p class="advantages__text"><span class="advantages__bold-text">Собственный склад</span><br>в Санкт-Петербурге, Астане, Алматы</p>
                     </div>
                     <div class="advantages__item">
                         <img src="/img/guarantee.png" alt="" class="advantages__img">
-                        <p class="advantages__text"><span class="advantages__bold-text">Гарантия</span> до 3-х лет</p>
+                        <p class="advantages__text"><span class="advantages__bold-text">Гарантия</span><br>до 3-х лет</p>
                     </div>
                     <div class="advantages__item">
                         <img src="/img/service.png" alt="" class="advantages__img">
-                        <p class="advantages__text"><span class="advantages__bold-text">Собственный центр</span> сервиса и поддержки</p>
+                        <p class="advantages__text"><span class="advantages__bold-text">Собственный<br>центр</span> сервиса и поддержки</p>
                     </div>
                 </div>
             </div>
         </div>
         <div class="titular__white-bottom">
             <div class="titular__wrap-1280">
+                <div class="titular__animate animate">
+                    <img src="/img/skaner.png" alt="" class="animate__img animate__img--scanner">
+                    <img src="/img/printer.png" alt="" class="animate__img animate__img--printer">
+                    <img src="/img/monitor.png" alt="" class="animate__img animate__img--sensor">
+                </div>
             </div>
         </div>
     </section>
@@ -41,36 +46,31 @@
             <div class="in-stock__equipments-wrap equipments">
                 <div class="equipments__col">
                     <div class="equipments__item equipment">
-                        <img src="/img/240.jpg" alt="" class="equipment__img">
-                        <img src="/img/shadow240.jpg" alt="" class="equipment__img-shadow">
+                        <img src="/img/sensor.png" alt="" class="equipment__img">
                         <p class="equipment__title">Сенсорные моноблоки</p>
                         <p class="equipment__models-count">3 модели</p>
                     </div>
                     <div class="equipments__item equipment">
-                        <img src="/img/240.jpg" alt="" class="equipment__img">
-                        <img src="/img/shadow240.jpg" alt="" class="equipment__img-shadow">
+                        <img src="/img/skaner-stock.png" alt="" class="equipment__img">
                         <p class="equipment__title">Сканнеры штрихкода</p>
                         <p class="equipment__models-count">3 модели</p>
                     </div>
                 </div>
                 <div class="equipments__col equipments__col--big">
                     <div class="equipments__item equipment">
-                        <img src="/img/500.jpg" alt="" class="equipment__img">
-                        <img src="/img/shadow500.jpg" alt="" class="equipment__img-shadow">
+                        <img src="/img/pos.jpg" alt="" class="equipment__img">
                         <p class="equipment__title">POS-системы</p>
                         <p class="equipment__models-count">3 модели</p>
                     </div>
                 </div>
                 <div class="equipments__col">
                     <div class="equipments__item equipment">
-                        <img src="/img/240.jpg" alt="" class="equipment__img">
-                        <img src="/img/shadow240.jpg" alt="" class="equipment__img-shadow">
+                        <img src="/img/printer-stock.png" alt="" class="equipment__img">
                         <p class="equipment__title">Чековые принтеры</p>
                         <p class="equipment__models-count">3 модели</p>
                     </div>
                     <div class="equipments__item equipment">
-                        <img src="/img/240.jpg" alt="" class="equipment__img">
-                        <img src="/img/shadow240.jpg" alt="" class="equipment__img-shadow">
+                        <img src="/img/printer-etiketok.png" alt="" class="equipment__img">
                         <p class="equipment__title">Принтеры этикеток</p>
                         <p class="equipment__models-count">3 модели</p>
                     </div>

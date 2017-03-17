@@ -7,12 +7,25 @@
     max-width: 1280px;
     margin: 0 auto;
 
-    &--background{}
+    &--background{
+      background: url("/img/top-gradient.png") no-repeat center top,
+                  url("/img/pockets.png") no-repeat 20px bottom,
+                  url("/img/bludo.png") no-repeat ~'calc(100% - 30px)' ~'calc(100% - 25px)';
+      padding: 40px 0 35px;
+    }
   }
 
-  &__title{}
+  &__title{
+    max-width: 750px;
+    text-align: center;
+    margin: 0 auto;
+    color: #FFFFFF;
+  }
 
   &__advantages{}
+
+  &__animate{
+  }
 }
 
 
@@ -21,8 +34,8 @@
   flex-wrap: wrap;
   border-radius: 10px;
   background-color: #fdc755;
-  padding: 40px 50px 40px 25px;
-  margin: 0 auto;
+  padding: 40px 50px 40px 20px;
+  margin: 50px auto 0;
   width: 245px;
 
   &__item{
@@ -30,7 +43,7 @@
     align-items: flex-start;
 
     &:not(:first-child){
-      margin-top: 15px;
+      margin-top: 20px;
     }
   }
 
@@ -43,5 +56,30 @@
 
   &__bold-text{
     font-family: @bold;
+  }
+}
+
+
+.animate{
+  position: relative;
+  height: 95px;
+
+  &__img{
+    position: absolute;
+
+    &--scanner{
+      bottom: 30px;
+      left: 200px;
+    }
+
+    &--printer{
+      bottom: 0;
+      left: 40px;
+    }
+
+    &--sensor{
+      bottom: 20px;
+      right: 150px;
+    }
   }
 }
