@@ -29,29 +29,27 @@
         <div class="titular__white-bottom">
             <div class="titular__wrap-1280">
                 <div class="titular__animate animate">
-                    <img src="/img/pockets.png" alt="" class="animate__img animate__img--pockets">
-                    <img src="/img/bludo.png" alt="" class="animate__img animate__img--bludo">
+
+                    {{-- Тут вот инлайновые стили вынеси пожалуйста в лесс, мне чет лень было :D  --}}
+
+                    <div class="animate__img animate__img--pockets">
+                        <object style="width: 427px;height: 370px">
+                            <embed src="/img/bags.svg" style="width: 427px;height: 370px">
+                        </object>
+                    </div>
+                    <div class="animate__img animate__img--bludo">
+                        <object style="width: 279px; height: 321px;">
+                            <embed src="/img/plate.svg" style="width: 279px; height: 321px;">
+                        </object>
+                    </div>
+
                     <img src="/img/skaner.png" alt="" class="animate__img animate__img--scanner">
                     <img src="/img/printer.png" alt="" class="animate__img animate__img--printer">
                     <img src="/img/monitor.png" alt="" class="animate__img animate__img--sensor">
+                    <img src="/img/on-monitor.png" alt="" class="animate__img animate__img--monitor">
 
-                    {{--<div class="advantages__item">
-                        <img src="/img/price.png" alt="" class="advantages__img">
-                        <p class="advantages__text"><span class="advantages__bold-text">Лучшие цены</span><br>
-                            в РФ и Казахстане</p>
-                    </div>
-                    <div class="advantages__item">
-                        <img src="/img/sclad.png" alt="" class="advantages__img">
-                        <p class="advantages__text"><span class="advantages__bold-text">Собственный склад</span><br>в Санкт-Петербурге, Астане, Алматы</p>
-                    </div>
-                    <div class="advantages__item">
-                        <img src="/img/guarantee.png" alt="" class="advantages__img">
-                        <p class="advantages__text"><span class="advantages__bold-text">Гарантия</span><br>до 3-х лет</p>
-                    </div>
-                    <div class="advantages__item">
-                        <img src="/img/service.png" alt="" class="advantages__img">
-                        <p class="advantages__text"><span class="advantages__bold-text">Собственный<br>центр</span> сервиса и поддержки</p>
-                    </div>--}}
+                    <img src="/img/hand-header.png" alt="" class="animate__img animate__img--hand">
+
                 </div>
             </div>
         </div>
