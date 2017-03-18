@@ -20,6 +20,28 @@ $(window).on('load', function () {
      setTimeout(animateClass('.animate__img--printer', 'animate__img--printer-animated'), 2000);*/
 });
 
+$(window).on('scroll', function () {
+    var bottomPosition = $(window).scrollTop() + $(window).height();
+    var blockTop = $('.about').offset().top;
+
+    if ( bottomPosition >= blockTop ){
+
+        var blockBottom = blockTop + $('.about').height();
+        var handHeight = $('.facts__hand-wrap').height();
+
+        if ( (bottomPosition > blockTop + handHeight) && (bottomPosition <= blockBottom) ){
+            $('.facts__hand-wrap').addClass('facts__hand-wrap--screen-fixed');
+            $('.facts__hand-wrap').removeClass('facts__hand-wrap--bottom-fixed');
+        }else if ( bottomPosition > $('.become').offset().top - 1 ){
+            $('.facts__hand-wrap').addClass('facts__hand-wrap--bottom-fixed');
+            $('.facts__hand-wrap').removeClass('facts__hand-wrap--screen-fixed');
+        }else {
+            $('.facts__hand-wrap').removeClass('facts__hand-wrap--screen-fixed');
+        }
+
+    }
+});
+
 function animateClass( animatedElement, animationClass ){
     $(animatedElement).addClass(animationClass);
 }
