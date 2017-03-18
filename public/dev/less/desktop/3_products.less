@@ -91,14 +91,16 @@
   &__img{
     position: relative;
     z-index: 1;
-    transition: top 1s ease-out 0.5s;
+    top: 0;
+    transition: top 1s ease;
+    animation: levitation 1.7s ease-out;
+    animation-play-state: paused;
+    animation-iteration-count: infinite;
+    animation-fill-mode: backwards;
 
     &:hover{
-      /*animation: levitation 1.5s linear 0.1s infinite alternate;*/
-      -webkit-animation: levitation 1s ease-out;
-      animation: levitation 1.7s ease-out;
-      -webkit-animation-iteration-count: infinite;
-      animation-iteration-count: infinite;
+      animation-fill-mode: forwards;
+      animation-play-state: running;
     }
   }
 

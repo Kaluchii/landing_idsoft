@@ -113,5 +113,50 @@
         opacity: 1;
       }
     }
+
+    &--monitor{
+      bottom: 179px;
+      right: 197px;
+      transition: opacity 1s ease-out 0.5s;
+      opacity: 0;
+      &-animated{
+        opacity: 1;
+      }
+    }
+    &--hand{
+      bottom: 120px;
+      right: 500px;
+      transition: opacity 1s ease-out 0.5s;
+      opacity: 0;
+      &-animated{
+
+        animation: click 2s ease 1s 1;
+        opacity: 1;
+
+      }
+    }
+
+  }
+}
+@keyframes click {
+  0%{
+    bottom: 120px;
+    right: 500px;
+    opacity: 1;
+  }
+  60%{
+    bottom: 170px;
+    right: 350px;
+    opacity: 1;
+  }
+  80%{
+    bottom: 150px;
+    right: 400px;
+    opacity: 1;
+  }
+  100%{
+    bottom: 150px;
+    right: 400px;
+    opacity: 0;
   }
 }
