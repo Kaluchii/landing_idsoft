@@ -26,7 +26,6 @@ $(window).on('load', function () {
     }, 5000);
 
 
-
     // Анимации блюда и пакетов css-ные находятся внутри svg файлов ( bags.svg  plate.svg )
 
 });
