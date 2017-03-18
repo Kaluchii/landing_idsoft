@@ -32,12 +32,12 @@
 
                     <div class="animate__img animate__img--pockets">
                         <object class="animate__img-object animate__img-object--pockets">
-                            <embed class="animate__img-embed" src="/img/bags.svg">
+                            <embed class="animate__img-embed animate__img-embed--pockets" src="/img/bags.svg">
                         </object>
                     </div>
                     <div class="animate__img animate__img--bludo">
                         <object class="animate__img-object animate__img-object--bludo">
-                            <embed class="animate__img-embed" src="/img/plate.svg">
+                            <embed class="animate__img-embed animate__img-embed--bludo" src="/img/plate.svg">
                         </object>
                     </div>
 

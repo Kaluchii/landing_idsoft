@@ -86,9 +86,11 @@
 .equipment{
   line-height: 0;
   position: relative;
+  text-align: center;
 
   &__img{
     position: relative;
+    max-width: 100%;
     z-index: 1;
     top: 0;
     transition: top 1s ease;
@@ -110,26 +112,15 @@
     z-index: 1;
     background-color: #FDC755;
     white-space: nowrap;
-    position: absolute;
-    bottom: -15px;
-    right: 50%;
-    -webkit-transform: translate(50%);
-    -moz-transform: translate(50%);
-    -ms-transform: translate(50%);
-    -o-transform: translate(50%);
-    transform: translate(50%);
+    position: relative;
+    display: inline-block;
+    bottom: 15px;
   }
 
   &__models-count{
     font-size: 14px;
-    position: absolute;
-    bottom: -40px;
-    right: 50%;
-    -webkit-transform: translate(50%);
-    -moz-transform: translate(50%);
-    -ms-transform: translate(50%);
-    -o-transform: translate(50%);
-    transform: translate(50%);
+    position: relative;
+    bottom: 15px;
     z-index: 1;
   }
 }

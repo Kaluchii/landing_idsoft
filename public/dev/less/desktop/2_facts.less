@@ -45,7 +45,10 @@
     }
   }
 
-  &__img{}
+  &__img{
+    width: 100%;
+    max-width: 75px;
+  }
 
   &__text{
     color: #333333;
@@ -150,7 +153,13 @@
   }
 
   &__img-embed{
-    width: 100%;
+    &--pockets{
+      height: 370px;
+    }
+
+    &--bludo{
+      height: 321px;
+    }
   }
 }
 @keyframes click {
