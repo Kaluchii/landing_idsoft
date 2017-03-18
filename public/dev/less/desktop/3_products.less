@@ -91,6 +91,15 @@
   &__img{
     position: relative;
     z-index: 1;
+    transition: top 1s ease-out 0.5s;
+
+    &:hover{
+      /*animation: levitation 1.5s linear 0.1s infinite alternate;*/
+      -webkit-animation: levitation 1s ease-out;
+      animation: levitation 1.7s ease-out;
+      -webkit-animation-iteration-count: infinite;
+      animation-iteration-count: infinite;
+    }
   }
 
   &__title{
@@ -121,5 +130,70 @@
     -o-transform: translate(50%);
     transform: translate(50%);
     z-index: 1;
+  }
+}
+@keyframes levitation {
+  0% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-15px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@-webkit-keyframes swing
+{
+  0%, 100%
+  {
+    -webkit-transform: translateY(-15px);
+    transform: translateY(-15px);
+  }
+  50%
+  {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+@keyframes swing
+{
+  0%, 100%
+  {
+    -webkit-transform: translateY(-15px);
+    transform: translateY(-15px);
+  }
+  50%
+  {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+
+@-webkit-keyframes shrink
+{
+  15%
+  {
+    -webkit-transform: scale(5px);
+    transform: scale(5px);
+  }
+  100%
+  {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+  }
+}
+@keyframes shrink
+{
+  15%
+  {
+    -webkit-transform: scale(5px);
+    transform: scale(5px);
+  }
+  100%
+  {
+    -webkit-transform: scale(0);
+    transform: scale(0);
   }
 }
