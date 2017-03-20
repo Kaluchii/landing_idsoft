@@ -119,10 +119,12 @@
       bottom: 179px;
       right: 197px;
       opacity: 0;
+      transform: scale(0);
 
       &-animated{
         opacity: 1;
-        transition: opacity 1s ease-out 0.5s;
+        transform: scale(1);
+        transition: opacity 1s ease-out 0.5s, transform .1s ease-out 0.5s;
       }
     }
 
