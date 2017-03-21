@@ -83,23 +83,51 @@ $(document).ready(function(){
                 parent.removeClass('error')
             }
             parent.addClass('valid');
+
+            if( input.hasClass('form-name') ){
+                $('.img-name').addClass('visible');
+            }
+            if( input.hasClass('form-phone') ){
+                $('.img-phone').addClass('visible');
+            }
+            if( input.hasClass('form-mail') ){
+                $('.img-mail').addClass('visible');
+            }
+            if( input.hasClass('form-question') ){
+                $('.img-question').addClass('visible');
+            }
+
             return true;
         } else {
             if( parent.hasClass('valid') ){
                 parent.removeClass('valid')
             }
             parent.addClass('error');
+
+            if( input.hasClass('form-name') ){
+                $('.img-name').removeClass('visible');
+            }
+            if( input.hasClass('form-phone') ){
+                $('.img-phone').removeClass('visible');
+            }
+            if( input.hasClass('form-mail') ){
+                $('.img-mail').removeClass('visible');
+            }
+            if( input.hasClass('form-question') ){
+                $('.img-question').removeClass('visible');
+            }
+
             return false;
         }
     }
 
-    $('.popup-input').on('change', function () {
+    $('.form-input').on('change', function () {
         return fieldCheck( $(this) );
     } );
-    $('.popup-input').on('focusout', function () {
+    $('.form-input').on('focusout', function () {
         $(this).parent().removeClass('filling');
     } );
-    $('.popup-input').on('input', function () {
+    $('.form-input').on('input', function () {
         $(this).parent().addClass('filling');
     });
 
@@ -128,6 +156,8 @@ $(document).ready(function(){
             object[$this.attr('name')] = $this.val();
         });
     }
+
+
     var active = true;
     $('.send-form').on('click',function() {
         if( active ){
@@ -136,7 +166,7 @@ $(document).ready(function(){
             var $this = $(this);
             var dataobj = {};
 
-            var selector = '#'+unical+' .popup-input';
+            var selector = '#'+unical+' .form-input';
             var validForm  = fieldsCheck( selector );
 
             if ( validForm ){
@@ -167,7 +197,6 @@ $(document).ready(function(){
                 });
 
             }else{
-                /*$('#'+unical+' .status-bar').addClass('show');*/
                 active = true;
             }
 

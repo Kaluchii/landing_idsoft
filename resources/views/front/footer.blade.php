@@ -5,41 +5,53 @@
             <h2 class="become__title block-title">Стать партнером</h2>
 
             <div class="become__form partner-form">
-                <form action="/feedback/mail" method="POST" name="ask" autocomplete="off" class="partner-form__form">
+                <form action="/feedback/mail" method="POST" name="ask" autocomplete="off" class="partner-form__form form" id="partner">
                     {{--Передача Названия формы--}}
-                    <input type="hidden" name="form" class="popup-input" value="ask">
+                    <input type="hidden" name="form" class="form-input" value="ask">
                     {{--Передача csrf-токена--}}
-                    <input type="hidden" name="_token" class="popup-input" value="{{ csrf_token() }}">
+                    <input type="hidden" name="_token" class="form-input" value="{{ csrf_token() }}">
 
                     <div class="partner-form__row">
                         <label class="partner-form__row-name">
                             <span class="partner-form__label">Имя</span>
-                            <input type="text" name="ask_name" required class="popup-input partner-form__input" placeholder="Имя">
+                            <div class="validation-wrap partner-form__input">
+                                <input type="text" name="ask_name" required class="form-input form-name" placeholder="Имя">
+                                <div class="tooltip-wrap"><p class="tooltip">Текст ошибки Текст ошибки Текст ошибки</p></div>
+                            </div>
                         </label>
                     </div>
                     <div class="partner-form__row">
                         <label class="partner-form__row-name">
                             <span class="partner-form__label">Контактный телефон</span>
-                            <input type="tel" class="popup-input partner-form__input"
-                                   data-mask="+7 (000) 000-00-00"
-                                   placeholder="+7 (___) ___-__-__"
-                                   data-require="true"
-                                   maxlength="25"
-                                   required
-                                   name="ask_phone">
+                            <div class="validation-wrap partner-form__input">
+                                <input type="tel" class="form-input form-phone"
+                                       data-mask="+7 (000) 000-00-00"
+                                       placeholder="+7 (___) ___-__-__"
+                                       data-require="true"
+                                       maxlength="25"
+                                       required
+                                       name="ask_phone">
+                                <div class="tooltip-wrap"><p class="tooltip">Текст ошибки Текст ошибки Текст ошибки</p></div>
+                            </div>
                         </label>
                     </div>
                     <div class="partner-form__row">
                         <label class="partner-form__row-name">
                             <span class="partner-form__label">Эл. почта</span>
-                            <input type="email" name="email" required class="popup-input partner-form__input" placeholder="Эл. почта">
+                            <div class="validation-wrap partner-form__input">
+                                <input type="email" name="email" required class="form-input form-mail" placeholder="Эл. почта">
+                                <div class="tooltip-wrap"><p class="tooltip">Текст ошибки Текст ошибки Текст ошибки</p></div>
+                            </div>
                         </label>
                     </div>
                     <div class="partner-form__row">
                         <label class="partner-form__row-name">
                             <span class="partner-form__label">Комментарий</span>
-                            <textarea name="ask_question" class="popup-input partner-form__input partner-form__input--textarea"
-                                      placeholder="Вопрос или комментарий"></textarea>
+                            <div class="validation-wrap partner-form__input">
+                                 <textarea name="ask_question" class="form-input from-question partner-form__input--textarea"
+                                           placeholder="Вопрос или комментарий"></textarea>
+                                <div class="tooltip-wrap"><p class="tooltip">Текст ошибки Текст ошибки Текст ошибки</p></div>
+                            </div>
                         </label>
                     </div>
                     <div class="partner-form__row partner-form__row--button">
@@ -52,7 +64,7 @@
 
             <div class="become__footer">
                 <div class="become__col-1-2">
-                    <div class="become__img-wrap become__img-wrap--100"><img src="/img/footer_logo.png" alt="IDsoft Автоматизация общепита и торговли" class="become__img"></div>
+                    <div class="become__img-wrap become__img-wrap--100"><img src="/img/footer_logo.png" alt="IDsoft Автоматизация общепита и торговли" class="become__img img-question"></div>
                     <div class="become__info">
                         <p class="become__info-row">© IDSOFT, 2017</p>
                         <p class="become__info-row">Отдел продаж: <a href="mailto:sales@idsoft.kz" class="become__info-mail">sales@idsoft.kz</a></p>
@@ -60,9 +72,9 @@
                     </div>
                 </div>
                 <div class="become__col-1-2">
-                    <div class="become__img-wrap become__img-wrap--100"><img src="/img/bocal.png" alt="" class="become__img"></div>
-                    <div class="become__img-wrap become__img-wrap--margin"><img src="/img/arrows.png" alt="" class="become__img"></div>
-                    <div class="become__img-wrap"><img src="/img/zont.png" alt="" class="become__img"></div>
+                    <div class="become__img-wrap become__img-wrap--100"><img src="/img/bocal.png" alt="" class="become__img img-name"></div>
+                    <div class="become__img-wrap become__img-wrap--margin"><img src="/img/arrows.png" alt="" class="become__img img-phone"></div>
+                    <div class="become__img-wrap"><img src="/img/zont.png" alt="" class="become__img img-mail"></div>
                 </div>
             </div>
 
