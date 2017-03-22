@@ -5,7 +5,7 @@
             <h2 class="become__title block-title">Стать партнером</h2>
 
             <div class="become__form partner-form">
-                <form action="/feedback/mail" method="POST" name="ask" autocomplete="off" class="partner-form__form form" id="partner">
+                <form action="/feedback/mail" method="POST" name="ask" autocomplete="off" class="partner-form__form form form-unical" id="partner">
                     {{--Передача Названия формы--}}
                     <input type="hidden" name="form" class="form-input" value="ask">
                     {{--Передача csrf-токена--}}
@@ -14,8 +14,8 @@
                     <div class="partner-form__row">
                         <label class="partner-form__row-name">
                             <span class="partner-form__label">Имя</span>
-                            <div class="validation-wrap partner-form__input">
-                                <input type="text" name="ask_name" required class="form-input form-name" placeholder="Имя">
+                            <div class="partner-form__validation-wrap">
+                                <input type="text" name="ask_name" required class="partner-form__input form-input form-name" placeholder="Имя">
                                 <div class="tooltip-wrap"><p class="tooltip">Текст ошибки Текст ошибки Текст ошибки</p></div>
                             </div>
                         </label>
@@ -23,8 +23,8 @@
                     <div class="partner-form__row">
                         <label class="partner-form__row-name">
                             <span class="partner-form__label">Контактный телефон</span>
-                            <div class="validation-wrap partner-form__input">
-                                <input type="tel" class="form-input form-phone"
+                            <div class="partner-form__validation-wrap">
+                                <input type="tel" class="partner-form__input form-input form-phone"
                                        data-mask="+7 (000) 000-00-00"
                                        placeholder="+7 (___) ___-__-__"
                                        data-require="true"
@@ -38,8 +38,8 @@
                     <div class="partner-form__row">
                         <label class="partner-form__row-name">
                             <span class="partner-form__label">Эл. почта</span>
-                            <div class="validation-wrap partner-form__input">
-                                <input type="email" name="email" required class="form-input form-mail" placeholder="Эл. почта">
+                            <div class="partner-form__validation-wrap">
+                                <input type="email" name="email" required class="partner-form__input form-input form-mail" placeholder="Эл. почта">
                                 <div class="tooltip-wrap"><p class="tooltip">Текст ошибки Текст ошибки Текст ошибки</p></div>
                             </div>
                         </label>
@@ -47,8 +47,8 @@
                     <div class="partner-form__row">
                         <label class="partner-form__row-name">
                             <span class="partner-form__label">Комментарий</span>
-                            <div class="validation-wrap partner-form__input">
-                                 <textarea name="ask_question" class="form-input from-question partner-form__input--textarea"
+                            <div class="partner-form__validation-wrap">
+                                 <textarea name="ask_question" class="partner-form__input form-input form-question partner-form__input--textarea"
                                            placeholder="Вопрос или комментарий"></textarea>
                                 <div class="tooltip-wrap"><p class="tooltip">Текст ошибки Текст ошибки Текст ошибки</p></div>
                             </div>
@@ -56,7 +56,7 @@
                     </div>
                     <div class="partner-form__row partner-form__row--button">
                         <span class="partner-form__row-name">
-                            <input type="submit" value="Отправить" class="send-form">
+                            <input type="submit" value="Отправить" class="partner-form__send-form send-form">
                         </span>
                     </div>
                 </form>

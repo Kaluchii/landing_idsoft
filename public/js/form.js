@@ -20,12 +20,12 @@ $(document).ready(function(){
     });
 
     // Отмена встроенной браузерной валидации форм
-    $('.feedback_popup').each(function () {
+    $('.form').each(function () {
         $(this).attr('novalidate', '')
     });
 
     // Предотвращение отправки формы через php при нажатии на кнопку
-    $('.feedback_popup').submit(function (e) {
+    $('.form').submit(function (e) {
         e.stopPropagation();
         e.preventDefault();
     });
@@ -123,10 +123,10 @@ $(document).ready(function(){
 
     $('.form-input').on('change', function () {
         return fieldCheck( $(this) );
-    } );
+    });
     $('.form-input').on('focusout', function () {
         $(this).parent().removeClass('filling');
-    } );
+    });
     $('.form-input').on('input', function () {
         $(this).parent().addClass('filling');
     });
@@ -161,7 +161,7 @@ $(document).ready(function(){
     var active = true;
     $('.send-form').on('click',function() {
         if( active ){
-            unical = $(this).closest('.form').attr('id');
+            unical = $(this).closest('.form-unical').attr('id');
             active = false;
             var $this = $(this);
             var dataobj = {};
