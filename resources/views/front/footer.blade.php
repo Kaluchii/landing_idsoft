@@ -1,14 +1,14 @@
 @section('footer')
-    <footer class="become">
+    {{--<footer class="become">
         <div class="become__wrap-1280">
 
             <h2 class="become__title block-title">Стать партнером</h2>
 
             <div class="become__form partner-form">
                 <form action="/feedback/mail" method="POST" name="ask" autocomplete="off" class="partner-form__form form form-unical" id="partner">
-                    {{--Передача Названия формы--}}
+                    --}}{{--Передача Названия формы--}}{{--
                     <input type="hidden" name="form" class="form-input" value="ask">
-                    {{--Передача csrf-токена--}}
+                    --}}{{--Передача csrf-токена--}}{{--
                     <input type="hidden" name="_token" class="form-input" value="{{ csrf_token() }}">
 
                     <div class="partner-form__row">
@@ -79,5 +79,5 @@
             </div>
 
         </div>
-    </footer>
+    </footer>--}}
 @endsection

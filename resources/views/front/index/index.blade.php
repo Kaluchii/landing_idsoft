@@ -1,7 +1,7 @@
 @extends('front.layout')
 @include('front.index.meta')
 @section('content')
-    <section class="titular">
+    {{--<section class="titular">
         <div class="titular__blue-top">
             <div class="titular__wrap-1280 titular__wrap-1280--background">
                 <h1 class="titular__title">Оборудование для автоматизации общепита и торговли</h1>
@@ -51,7 +51,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section>--}}
 
 
     <section class="in-stock">
@@ -73,7 +73,7 @@
                     </div>
                 </div>
                 <div class="equipments__col equipments__col--big">
-                    <div class="equipments__item equipment">
+                    <div class="equipments__item equipment equipment--big">
                         <img src="/img/pos.jpg" alt="" class="equipment__img">
                         <p class="equipment__title">POS-системы</p>
                         <p class="equipment__models-count">3 модели</p>
@@ -100,7 +100,7 @@
                     актуальные цены и о прогрессирующих скидках.</p>
             </div>
         </div>
-        <p class="in-stock__popularity">Мы поставляем оборудование 8 из 10 интеграторам Казахстана</p>
+        <p class="in-stock__popularity">Мы поставляем оборудование 8&nbsp;из&nbsp;10 интеграторов Казахстана</p>
     </section>
 
 

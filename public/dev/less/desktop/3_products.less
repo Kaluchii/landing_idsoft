@@ -68,10 +68,7 @@
   padding-top: 15px;
 
   &__col{
-    width: 240px;
-
     &--big{
-      width: 500px;
       margin-top: 20px;
     }
   }
@@ -87,10 +84,14 @@
   line-height: 0;
   position: relative;
   text-align: center;
+  max-width: 240px;
+
+  &--big{
+    max-width: 500px;
+  }
 
   &__img{
     position: relative;
-    max-width: 100%;
     z-index: 1;
     top: 0;
     transition: top 1s ease;

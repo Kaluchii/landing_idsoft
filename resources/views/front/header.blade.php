@@ -1,5 +1,5 @@
 @section('header')
-    <header class="header">
+    {{--<header class="header">
         <div class="header__wrap-1220">
             <div class="header__logo">
                 <img src="/img/logo.png" alt="Автоматизация общепита и торговли" class="header__logo-img">
@@ -26,5 +26,5 @@
                 <a href="#" class="sticky-header__become-partner-btn">Стать партнером</a>
             </div>
         </div>
-    </div>
+    </div>--}}
 @endsection
