@@ -2,55 +2,21 @@
 
 return [
 
-    'block_birds' => [
-        'string' => [
-            'descr'
-        ],
+    'products' => [
+        'string' => ['pr1', 'pr1_count', 'pr2', 'pr2_count', 'pr3', 'pr3_count', 'pr4', 'pr4_count', 'pr5', 'pr5_count'],
+        'image' => ['pr1_img', 'pr2_img', 'pr3_img', 'pr4_img', 'pr5_img'],
+        'file' => ['cp'],
+    ],
 
+    'guarantee' => [
         'groups' => [
-            'group_bird_type' => [
-                'string' => [
-                    'descr'
-                ],
-                'group_bird_class' => [
-                    'example'
-                ],
+            'slider' => [
+                'image' => ['slide'],
             ],
-            'group_bird_class' => [
-                'string' => [
-                    'descr'
-                ],
-                'image' => [
-                    'foto'
-                ],
-                'group_bird_type' => [
-                    'superior'
-                ]
-            ],
-            'group_bird_area' => [
-                'group_area' => [
-                    'area'
-                ],
-                'group_bird_type' => [
-                    'superior'
-                ]
+            'support' => [
+                'string' => ['title'],
+                'text' => ['descr'],
             ]
         ]
     ],
-
-    'block_areas' => [
-        'string' => [
-            'descr'
-        ],
-
-        'groups' => [
-            'group_area' => [
-                'string' => [
-                    'descr'
-                ]
-            ]
-        ]
-
-    ]
-
 ];

@@ -155,6 +155,7 @@ return [
         Interpro\Scalar\ScalarFirstServiceProvider::class,
         Interpro\Seo\SeoFirstServiceProvider::class,
         Interpro\ImageAggr\ImageAggrFirstServiceProvider::class,
+        Interpro\FileAggr\FileAggrFirstServiceProvider::class,
         Interpro\QS\QSFirstServiceProvider::class,
         Interpro\Feedback\FeedbackFirstServiceProvider::class,
         //============================================
@@ -167,6 +168,7 @@ return [
         Interpro\Scalar\ScalarSecondServiceProvider::class,
         Interpro\Seo\SeoSecondServiceProvider::class,
         Interpro\ImageAggr\ImageAggrSecondServiceProvider::class,
+        Interpro\FileAggr\FileAggrSecondServiceProvider::class,
         Interpro\QS\QSSecondServiceProvider::class,
         Interpro\Feedback\FeedbackSecondServiceProvider::class,
         //============================================
@@ -176,6 +178,7 @@ return [
         Interpro\Entrance\EntranceServiceProvider::class,
         //--------------------------------------------
         Interpro\ImageAggr\ImageAggrUseServiceProvider::class,
+        Interpro\FileAggr\FileAggrUseServiceProvider::class,
         Interpro\Feedback\FeedbackUseServiceProvider::class,
         //============================================
 

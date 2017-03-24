@@ -16,6 +16,22 @@ Route::get('/', function () {
 });
 
 
+Route::post('/feedback/mail', 'Back\MailController@send');
+
+Route::get('/mail/{popup_name}', function ( $popup_name )
+{
+    if( $popup_name != 'thank' && $popup_name != 'error' )
+    {
+        Session::put('back_page', request()->header('referer'));
+        Session::put('form_from', request()->header('form_page'));
+    }
+
+    return view('front.popup_pages.popup', [
+        'popup_name' => $popup_name
+    ]);
+});
+
+
 Route::auth();
 Route::group(['middleware' => 'auth', 'prefix' => 'adm'],function(){
 

@@ -1,6 +1,20 @@
 $(document).ready(function () {
 
+    $('.open_feedback').magnificPopup({
+        type: 'inline',
+        removalDelay: 500,
+        callbacks: {
+            beforeOpen: function () {
+                this.st.mainClass = 'mfp-zoom-in';
+            }
+        },
+        midClick: true
+    });
+
+    $('.facts__hand-wrap').addClass('visible');
+
 });
+
 $(window).on('load', function () {
     setTimeout(function () {
         animateClass('.animate__img--printer', 'animate__img--printer-animated')

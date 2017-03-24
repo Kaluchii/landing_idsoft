@@ -5,9 +5,9 @@
             <h2 class="become__title block-title">Стать партнером</h2>
 
             <div class="become__form partner-form">
-                <form action="/feedback/mail" method="POST" name="ask" autocomplete="off" class="partner-form__form form form-unical" id="partner">
+                <form action="/feedback/mail" method="POST" name="partner" autocomplete="off" class="partner-form__form form form-unical" id="partner">
                     {{--Передача Названия формы--}}
-                    <input type="hidden" name="form" class="form-input" value="ask">
+                    <input type="hidden" name="form" class="form-input" value="partner">
                     {{--Передача csrf-токена--}}
                     <input type="hidden" name="_token" class="form-input" value="{{ csrf_token() }}">
 
@@ -15,7 +15,7 @@
                         <label class="partner-form__row-name">
                             <span class="partner-form__label">Имя</span>
                             <div class="partner-form__validation-wrap">
-                                <input type="text" name="ask_name" required class="partner-form__input form-input form-name" placeholder="Имя">
+                                <input type="text" name="name" required class="partner-form__input form-input form-name" placeholder="Имя">
                                 <div class="tooltip-wrap"><p class="tooltip">Текст ошибки Текст ошибки Текст ошибки</p></div>
                             </div>
                         </label>
@@ -30,7 +30,7 @@
                                        data-require="true"
                                        maxlength="25"
                                        required
-                                       name="ask_phone">
+                                       name="phone">
                                 <div class="tooltip-wrap"><p class="tooltip">Текст ошибки Текст ошибки Текст ошибки</p></div>
                             </div>
                         </label>
@@ -48,7 +48,7 @@
                         <label class="partner-form__row-name">
                             <span class="partner-form__label">Комментарий</span>
                             <div class="partner-form__validation-wrap">
-                                 <textarea name="ask_question" class="partner-form__input form-input form-question partner-form__input--textarea"
+                                 <textarea name="question" class="partner-form__input form-input form-question partner-form__input--textarea"
                                            placeholder="Вопрос или комментарий"></textarea>
                                 <div class="tooltip-wrap"><p class="tooltip">Текст ошибки Текст ошибки Текст ошибки</p></div>
                             </div>

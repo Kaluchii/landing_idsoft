@@ -37,15 +37,6 @@ $(document).ready(function(){
     }
 
 
-
-
-
-
-
-
-
-
-
     // Очистка формы
     function clearFields( selector ){
         $(selector).each(function(){
@@ -60,7 +51,7 @@ $(document).ready(function(){
 
         if( input.val() != '' ){
 
-            if ( input.attr('name') == 'email' ){
+            if ( input.attr('type') == 'email' ){
                 return isEmail( input.val() );
             } else {
                 return true;
@@ -199,7 +190,6 @@ $(document).ready(function(){
             }else{
                 active = true;
             }
-
 
         }
 

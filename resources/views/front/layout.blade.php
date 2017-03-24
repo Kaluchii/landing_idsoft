@@ -21,8 +21,9 @@
     @yield('footer')
 
     <div class="hide">
+        @include('front.popups.partner')
         @include('front.popups.thank')
-        <a href="#thanks" class="thank"></a>
+        <a href="/mail/thanks" class="thank open_popup"></a>
     </div>
 
     @include('front.scripts')

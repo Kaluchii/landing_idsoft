@@ -48,6 +48,7 @@
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+    opacity: 0;
   }
 
   &__info {
@@ -197,18 +198,19 @@
     -moz-border-radius: 4px;
     border-radius: 4px;
 
+    &:hover {
+      background-color: #1491c4;
+      outline: none;
+    }
+    
     &.load {
       background: url(../img/default.svg) center center no-repeat, #aaaaaa;
       background-size: 38px 38px;
       color: transparent;
-      /*width: 126px;
-      height: 38px;*/
+      width: 140px;
+      height: 48px;
+      cursor: default;
       padding: 0;
-    }
-
-    &:hover {
-      background-color: #1491c4;
-      outline: none;
     }
   }
 }

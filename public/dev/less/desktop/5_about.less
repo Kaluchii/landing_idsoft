@@ -43,6 +43,7 @@
   }
 
   &__hand-wrap{
+    display: none;
     position: absolute;
     top: 0;
     z-index: 7;
@@ -55,6 +56,10 @@
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+
+    &.visible{
+      display: block;
+    }
 
     &--screen-fixed{
       position: fixed;

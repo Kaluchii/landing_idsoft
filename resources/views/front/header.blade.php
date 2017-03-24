@@ -10,7 +10,7 @@
                 <a href="mailto:spb@idsoft.info" class="header__mailto">spb@idsoft.info</a>
             </div>
             <div class="header__become-partner">
-                <a href="#" class="header__become-partner-btn">Стать партнером</a>
+                <a href="/mail/partner" class="header__become-partner-btn open_feedback open_popup">Стать партнером</a>
             </div>
         </div>
     </header>
@@ -23,7 +23,7 @@
                 <span class="sticky-header__phone">+7 (747) 220-20-00</span>
             </div>
             <div class="sticky-header__become-partner">
-                <a href="#" class="sticky-header__become-partner-btn">Стать партнером</a>
+                <a href="/mail/partner" class="sticky-header__become-partner-btn open_feedback open_popup">Стать партнером</a>
             </div>
         </div>
     </div>--}}

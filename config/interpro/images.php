@@ -1,20 +1,22 @@
 <?php
 
 return [
-
-    'modimages.wmimage' => [
-        'resizes' => ['res100x100', 'res400'],
-        'crops' => ['crop400x300']
+    'products.pr1_img'=> [
+        'resizes' => ['preview']
     ],
-
-    'modimages.maskimage' => [
-        'resizes' => ['res100x100', 'res400'],
-        'crops' => ['crop400x300']
+    'products.pr2_img'=> [
+        'resizes' => ['preview']
     ],
-
-    'group_bird_class.foto' => [
-        'resizes' => ['res100x100', 'res400', 'res800', 'res1000'],
-        'crops' => ['crop800x600']
-    ]
-
+    'products.pr3_img'=> [
+        'resizes' => ['preview']
+    ],
+    'products.pr4_img'=> [
+        'resizes' => ['preview']
+    ],
+    'products.pr5_img'=> [
+        'resizes' => ['preview']
+    ],
+    'slider.slide' => [
+        'resizes' => ['preview']
+    ],
 ];
