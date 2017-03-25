@@ -1,3 +1,10 @@
+/* Форма должна иметь класс .form
+Идентификатор должен находиться у формы или попапа,
+    элементу с идентификатором прописать класс .form-id
+Каждый инпут должен иметь класс .form-input
+Каждая ссылка для открытия попапа должна содержать класс .open_popup,
+    а в свойстве href должна содержать /mail/id_попапа */
+
 $(document).ready(function(){
     $('.thank').magnificPopup({
         type: 'inline',
@@ -40,8 +47,10 @@ $(document).ready(function(){
     // Очистка формы
     function clearFields( selector ){
         $(selector).each(function(){
-            $(this).val('');
-            $(this).parent().removeClass('valid');
+            if( $(this).attr('name') != 'form' && $(this).attr('name') != '_token'){
+                $(this).val('');
+                $(this).parent().removeClass('valid');
+            }
         });
     }
 
@@ -152,7 +161,7 @@ $(document).ready(function(){
     var active = true;
     $('.send-form').on('click',function() {
         if( active ){
-            unical = $(this).closest('.form-unical').attr('id');
+            unical = $(this).closest('.form-id').attr('id');
             active = false;
             var $this = $(this);
             var dataobj = {};

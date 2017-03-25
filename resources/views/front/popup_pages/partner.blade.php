@@ -10,65 +10,63 @@
 </head>
 <body>
 <div class="popup-page">
-    <div class="white-popup mfp-with-anim mfp-hide form" id="partner">
-        <h4 class="popup-title">Написать письмо</h4>
-        <form action="/feedback/mail" method="POST" name="partner" autocomplete="off" class="feedback_popup">
-            <div class="rows-block">
-                {{--Передача Названия формы--}}
-                <input type="hidden" name="form" class="popup-input" value="partner">
-                {{--Передача csrf-токена--}}
-                <input type="hidden" name="_token" class="popup-input" value="{{ csrf_token() }}">
+    <div class="white-popup mfp-with-anim mfp-hide form-id" id="partner">
+        <h4 class="white-popup__title">Написать письмо</h4>
+        <form action="/feedback/mail" method="POST" name="partner" autocomplete="off" class="white-popup__form form">
+            {{--Передача Названия формы--}}
+            <input type="hidden" name="form" class="form-input" value="partner">
+            {{--Передача csrf-токена--}}
+            <input type="hidden" name="_token" class="form-input" value="{{ csrf_token() }}">
 
-                <div class="row">
-                    <label class="row-name">Имя
-                        <div class="validation-wrap">
-                            <input type="text" name="name" required class="popup-input" placeholder="Имя" autofocus>
-                            <div class="tooltip-wrap"><p class="tooltip">Текст ошибки Текст ошибки Текст ошибки</p></div>
-                        </div>
-                    </label>
-                </div>
-
-                <div class="row">
-                    <label class="row-name">Контактный телефон
-                        <div class="validation-wrap">
-                            <input type="tel" class="popup-input"
-                                   data-mask="+7 (000) 000-00-00"
-                                   placeholder="+7 (___) ___-__-__"
-                                   data-require="true"
-                                   maxlength="25"
-                                   required
-                                   name="phone">
-                            <div class="tooltip-wrap"><p class="tooltip">Текст ошибки</p></div>
-                        </div>
-                    </label>
-                </div>
-
-                <div class="row">
-                    <label class="row-name">Эл. почта <span class="gray">для ответа</span>
-                        <div class="validation-wrap">
-                            <input type="email" name="mail" required class="popup-input" placeholder="Эл. почта">
-                            <div class="tooltip-wrap"><p class="tooltip">Текст ошибки</p></div>
-                        </div>
-                    </label>
-                </div>
-
-                <div class="row">
-                    <label class="row-name">Комментарий
-                        <div class="validation-wrap">
-                              <textarea name="question" class="popup-input"
-                                        placeholder="Вопрос или комментарий"></textarea>
-                            <div class="tooltip-wrap"><p class="tooltip">Текст ошибки</p></div>
-                        </div>
-                    </label>
-                </div>
-
-
-                <div class="row button-row">
-                    <div class="col-1-2">
-                        <span class="row-name">
-                            <input type="submit" value="Отправить" class="send-form">
-                        </span>
+            <div class="white-popup__row">
+                <label class="row-name">Имя
+                    <div class="validation-wrap">
+                        <input type="text" name="name" required class="form-input" placeholder="Имя" autofocus>
+                        <div class="tooltip-wrap"><p class="tooltip">Текст ошибки Текст ошибки Текст ошибки</p></div>
                     </div>
+                </label>
+            </div>
+
+            <div class="row">
+                <label class="row-name">Контактный телефон
+                    <div class="validation-wrap">
+                        <input type="tel" class="form-input"
+                               data-mask="+7 (000) 000-00-00"
+                               placeholder="+7 (___) ___-__-__"
+                               data-require="true"
+                               maxlength="25"
+                               required
+                               name="phone">
+                        <div class="tooltip-wrap"><p class="tooltip">Текст ошибки</p></div>
+                    </div>
+                </label>
+            </div>
+
+            <div class="row">
+                <label class="row-name">Эл. почта <span class="gray">для ответа</span>
+                    <div class="validation-wrap">
+                        <input type="email" name="mail" required class="form-input" placeholder="Эл. почта">
+                        <div class="tooltip-wrap"><p class="tooltip">Текст ошибки</p></div>
+                    </div>
+                </label>
+            </div>
+
+            <div class="row">
+                <label class="row-name">Комментарий
+                    <div class="validation-wrap">
+                          <textarea name="question" class="form-input"
+                                    placeholder="Вопрос или комментарий"></textarea>
+                        <div class="tooltip-wrap"><p class="tooltip">Текст ошибки</p></div>
+                    </div>
+                </label>
+            </div>
+
+
+            <div class="row button-row">
+                <div class="col-1-2">
+                    <span class="row-name">
+                        <input type="submit" value="Отправить" class="send-form">
+                    </span>
                 </div>
             </div>
         </form>

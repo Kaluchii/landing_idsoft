@@ -5,7 +5,7 @@
             <h2 class="become__title block-title">Стать партнером</h2>
 
             <div class="become__form partner-form">
-                <form action="/feedback/mail" method="POST" name="partner" autocomplete="off" class="partner-form__form form form-unical" id="partner">
+                <form action="/feedback/mail" method="POST" name="partner" autocomplete="off" class="partner-form__form form form-id" id="partner">
                     {{--Передача Названия формы--}}
                     <input type="hidden" name="form" class="form-input" value="partner">
                     {{--Передача csrf-токена--}}
@@ -16,7 +16,7 @@
                             <span class="partner-form__label">Имя</span>
                             <div class="partner-form__validation-wrap">
                                 <input type="text" name="name" required class="partner-form__input form-input form-name">
-                                <div class="tooltip-wrap"><p class="tooltip">Текст ошибки Текст ошибки Текст ошибки</p></div>
+                                <div class="tooltip-wrap"><p class="tooltip">Если хотите, мы будем звать Вас Эдуард</p></div>
                             </div>
                         </label>
                     </div>
@@ -31,7 +31,7 @@
                                        maxlength="25"
                                        required
                                        name="phone">
-                                <div class="tooltip-wrap"><p class="tooltip">Текст ошибки Текст ошибки Текст ошибки</p></div>
+                                <div class="tooltip-wrap"><p class="tooltip">Укажите номер для связи</p></div>
                             </div>
                         </label>
                     </div>
@@ -40,7 +40,7 @@
                             <span class="partner-form__label">Эл. почта</span>
                             <div class="partner-form__validation-wrap">
                                 <input type="email" name="email" required class="partner-form__input form-input form-mail">
-                                <div class="tooltip-wrap"><p class="tooltip">Текст ошибки Текст ошибки Текст ошибки</p></div>
+                                <div class="tooltip-wrap"><p class="tooltip">Электронный адрес в формате address@mail.com</p></div>
                             </div>
                         </label>
                     </div>
@@ -49,7 +49,7 @@
                             <span class="partner-form__label">Комментарий</span>
                             <div class="partner-form__validation-wrap">
                                  <textarea name="question" class="partner-form__input form-input form-question partner-form__input--textarea"></textarea>
-                                <div class="tooltip-wrap"><p class="tooltip">Текст ошибки Текст ошибки Текст ошибки</p></div>
+                                <div class="tooltip-wrap"><p class="tooltip">Какой бизнес вы хотите автоматизировать</p></div>
                             </div>
                         </label>
                     </div>

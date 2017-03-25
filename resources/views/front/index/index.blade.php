@@ -1,7 +1,7 @@
 @extends('front.layout')
 @include('front.index.meta')
 @section('content')
-    {{--<section class="titular">
+    <section class="titular">
         <div class="titular__blue-top">
             <div class="titular__wrap-1280 titular__wrap-1280--background">
                 <h1 class="titular__title">Оборудование для автоматизации общепита и торговли</h1>
@@ -51,7 +51,7 @@
                 </div>
             </div>
         </div>
-    </section>--}}
+    </section>
 
 
     <section class="in-stock">

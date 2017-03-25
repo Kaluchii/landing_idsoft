@@ -44,27 +44,40 @@ $(window).on('load', function () {
 
 });
 
-$(window).on('scroll', function () {
-    var scrollTop = $(window).scrollTop();
-    var bottomPosition = scrollTop + $(window).height();
-    var blockTop = $('.about').offset().top;
-    var blockBottom = blockTop + $('.about').height();
-    var handHeight = $('.facts__hand-wrap').height();
-
-    if ( scrollTop > $('.in-stock').offset().top ){
-        $('.sticky-header').fadeIn();
+// Перестройка блоков контента на разных разрешениях
+function MoveBlock() {
+    if ($(window).width() <= '720') {
+        $('.facts__reputation').appendTo($('.facts__col-1-2:last-child'));
     } else {
-        $('.sticky-header').fadeOut();
+        $('.facts__reputation').appendTo($('.facts__col-1-2:nth-child(2)'));
     }
+}
 
-    if ( (bottomPosition > blockTop + handHeight) && (bottomPosition <= blockBottom) ){
-        $('.facts__hand-wrap').addClass('facts__hand-wrap--screen-fixed');
-        $('.facts__hand-wrap').removeClass('facts__hand-wrap--bottom-fixed');
-    }else if ( bottomPosition > $('.become').offset().top - 1 ){
-        $('.facts__hand-wrap').addClass('facts__hand-wrap--bottom-fixed');
-        $('.facts__hand-wrap').removeClass('facts__hand-wrap--screen-fixed');
-    }else {
-        $('.facts__hand-wrap').removeClass('facts__hand-wrap--screen-fixed');
+$(window).on('load resize', MoveBlock);
+
+$(window).on('scroll', function () {
+    if ($(window).width() > '1000') {
+        var scrollTop = $(window).scrollTop();
+        var bottomPosition = scrollTop + $(window).height();
+        var blockTop = $('.about').offset().top;
+        var blockBottom = blockTop + $('.about').height();
+        var handHeight = $('.facts__hand-wrap').height();
+
+        if ( scrollTop > $('.in-stock').offset().top ){
+            $('.sticky-header').fadeIn();
+        } else {
+            $('.sticky-header').fadeOut();
+        }
+
+        if ( (bottomPosition > blockTop + handHeight) && (bottomPosition <= blockBottom) ){
+            $('.facts__hand-wrap').addClass('facts__hand-wrap--screen-fixed');
+            $('.facts__hand-wrap').removeClass('facts__hand-wrap--bottom-fixed');
+        }else if ( bottomPosition > $('.become').offset().top - 1 ){
+            $('.facts__hand-wrap').addClass('facts__hand-wrap--bottom-fixed');
+            $('.facts__hand-wrap').removeClass('facts__hand-wrap--screen-fixed');
+        }else {
+            $('.facts__hand-wrap').removeClass('facts__hand-wrap--screen-fixed');
+        }
     }
 });
 
