@@ -21,3 +21,79 @@
     }
   }
 }
+
+@media screen and (max-width: 940px) {
+  .tooltip-wrap {
+    margin: 0 4px;
+    left: auto;
+    right: 0;
+    top: auto;
+    bottom: ~'calc(100% + 25px)';
+    transform: none;
+    width: auto;
+    max-width: none;
+  }
+
+  .tooltip {
+    &::before, &::after {
+      bottom: -5px;
+      top: auto;
+      left: ~'calc(50% - 5px)';
+    }
+  }
+}
+
+@media screen and (max-width: 730px) {
+  .become {
+    &__wrap-1280 {
+      background: url("/img/left_border.png") top left / 10% 100% no-repeat,
+                  url("/img/right_border.png") top right / 10% 100% no-repeat,
+                  url("/img/cardboard.jpg") center repeat-x;
+      padding-bottom: 30px;
+    }
+
+    &__footer {
+      padding: 0 10% 0 15%;
+      margin-top: 0;
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .partner-form {
+    &__form{
+      max-width: 302px;
+    }
+
+    &__input {
+      padding: 10px 8px;
+      font-size: 18px;
+    }
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .become {
+    &__wrap-1280 {
+      background: url("/img/cardboard.jpg") center repeat-x;
+    }
+
+    &__title{
+      padding: 0 6%;
+    }
+
+    &__footer {
+      padding: 0 15px;
+    }
+  }
+
+  .partner-form {
+    &__form {
+      max-width: 282px;
+    }
+
+    &__input {
+      max-width: 258px;
+    }
+  }
+}

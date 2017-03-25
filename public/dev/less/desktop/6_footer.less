@@ -106,6 +106,7 @@
 
     &--button {
       text-align: right;
+      margin-right: 3px;
     }
   }
 
@@ -222,6 +223,8 @@
   left: 325px;
   top: 50%;
   transform: translateY(-50%);
+  max-width: 270px;
+  width: 100%;
 }
 
 .tooltip {
@@ -236,6 +239,9 @@
   -moz-border-radius: 5px;
   border-radius: 5px;
   font-weight: normal;
+  text-align: center;
+  display: inline-block;
+  line-height: 1.45;
 
   &::before, &::after {
     content: '';

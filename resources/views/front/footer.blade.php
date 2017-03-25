@@ -15,7 +15,7 @@
                         <label class="partner-form__row-name">
                             <span class="partner-form__label">Имя</span>
                             <div class="partner-form__validation-wrap">
-                                <input type="text" name="name" required class="partner-form__input form-input form-name" placeholder="Имя">
+                                <input type="text" name="name" required class="partner-form__input form-input form-name">
                                 <div class="tooltip-wrap"><p class="tooltip">Текст ошибки Текст ошибки Текст ошибки</p></div>
                             </div>
                         </label>
@@ -39,7 +39,7 @@
                         <label class="partner-form__row-name">
                             <span class="partner-form__label">Эл. почта</span>
                             <div class="partner-form__validation-wrap">
-                                <input type="email" name="email" required class="partner-form__input form-input form-mail" placeholder="Эл. почта">
+                                <input type="email" name="email" required class="partner-form__input form-input form-mail">
                                 <div class="tooltip-wrap"><p class="tooltip">Текст ошибки Текст ошибки Текст ошибки</p></div>
                             </div>
                         </label>
@@ -48,8 +48,7 @@
                         <label class="partner-form__row-name">
                             <span class="partner-form__label">Комментарий</span>
                             <div class="partner-form__validation-wrap">
-                                 <textarea name="question" class="partner-form__input form-input form-question partner-form__input--textarea"
-                                           placeholder="Вопрос или комментарий"></textarea>
+                                 <textarea name="question" class="partner-form__input form-input form-question partner-form__input--textarea"></textarea>
                                 <div class="tooltip-wrap"><p class="tooltip">Текст ошибки Текст ошибки Текст ошибки</p></div>
                             </div>
                         </label>
