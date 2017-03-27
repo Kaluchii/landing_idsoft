@@ -36,7 +36,7 @@
             <label class="form-row__name">
                 <span class="form-row__label">Эл. почта</span>
                 <div class="form-row__validation-wrap">
-                    <input type="email" name="mail" required class="form-row__input form-input">
+                    <input type="email" name="email" required class="form-row__input form-input">
                     <div class="form-row__tooltip-wrap"><p class="form-row__tooltip">Электронный адрес в формате address@mail.com</p></div>
                 </div>
             </label>
@@ -46,7 +46,7 @@
             <label class="form-row__name">
                 <span class="form-row__label">Комментарий</span>
                 <div class="form-row__validation-wrap">
-                          <textarea name="question" class="form-row__input form-row__input--textarea"></textarea>
+                          <textarea name="question" class="form-row__input form-row__input--textarea form-input"></textarea>
                     <div class="form-row__tooltip-wrap"><p class="form-row__tooltip">Какой бизнес вы хотите автоматизировать</p></div>
                 </div>
             </label>

@@ -39,7 +39,7 @@ $(document).ready(function(){
 
     // Проверка почты на соответствие маске *@*.*
     function isEmail( mail ){
-        regex = /[A-Z0-9._%+-]+@[A-Z0-9-]+.+.[A-Z]{2,4}/igm;
+        regex = /\S+@\S+/igm;
         return regex.test(mail);
     }
 
