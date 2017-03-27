@@ -5,7 +5,7 @@
             <h2 class="become__title block-title">Стать партнером</h2>
 
             <div class="become__form partner-form">
-                <form action="/feedback/mail" method="POST" name="partner" autocomplete="off" class="partner-form__form form form-id" id="partner">
+                <form action="/feedback/mail" method="POST" name="become_partner" autocomplete="off" class="partner-form__form form form-id" id="become_partner">
                     {{--Передача Названия формы--}}
                     <input type="hidden" name="form" class="form-input" value="partner">
                     {{--Передача csrf-токена--}}
@@ -15,7 +15,7 @@
                         <label class="partner-form__row-name">
                             <span class="partner-form__label">Имя</span>
                             <div class="partner-form__validation-wrap">
-                                <input type="text" name="name" required class="partner-form__input form-input form-name">
+                                <input type="text" name="client_name" required class="partner-form__input form-input form-name">
                                 <div class="tooltip-wrap"><p class="tooltip">Если хотите, мы будем звать Вас Эдуард</p></div>
                             </div>
                         </label>
