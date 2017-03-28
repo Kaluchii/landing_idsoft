@@ -1,4 +1,10 @@
 .about{
+  overflow-x: hidden;
+
+  &--custom-cursor{
+    cursor: url('/img/cursor.png'), auto;
+  }
+
   &__title{
     line-height: 1;
   }
@@ -45,17 +51,13 @@
   &__hand-wrap{
     display: none;
     position: absolute;
-    top: 0;
+    top: 90px;
     z-index: 7;
-    -webkit-transform: translateX(30%);
-    -moz-transform: translateX(30%);
-    -ms-transform: translateX(30%);
-    -o-transform: translateX(30%);
     transform: translateX(30%);
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
     user-select: none;
+
+    min-width: 439px;
+    left: -280px;
 
     &.visible{
       display: block;
@@ -63,12 +65,42 @@
 
     &--screen-fixed{
       position: fixed;
-      top: ~'calc(100% - 284px)';
+      top: ~'calc(100% - 255px)';
     }
 
     &--bottom-fixed{
       position: absolute;
-      top: ~'calc(100% - 284px)';
+      top: ~'calc(100% - 255px)';
+    }
+
+    &--left{
+      left: -280px;
+    }
+
+    &--reading{
+      left: 300px;
+      transition: left 1.4s ease;
+    }
+
+    &--right{
+      left: 80%;
+      top: 190px;
+      transition: left 1s cubic-bezier(0.45, -0.06, 0.69, 0.51), top 1.2s ease;
+    }
+  }
+
+  &__hand{
+    position: relative;
+  }
+
+  &__hand-laser-img{
+    display: none;
+    position: absolute;
+    top: -80px;
+    left: -64px;
+    
+    &--on{
+      /*display: block;*/
     }
   }
 }

@@ -15,6 +15,26 @@ $(document).ready(function () {
 
 });
 
+function animateClass( animatedElement, animationClass ){
+    $(animatedElement).addClass(animationClass);
+}
+
+function scanerAnim() {
+    $('.facts__hand-laser-img').addClass('facts__hand-laser-img--on').fadeIn();
+    setTimeout(function () {
+        animateClass('.facts__hand-wrap', 'facts__hand-wrap--reading')
+    }, 1400);
+    setTimeout(function () {
+        $('.facts__hand-laser-img').removeClass('facts__hand-laser-img--on').fadeOut();
+    }, 3000);
+    setTimeout(function () {
+        animateClass('.facts__hand-wrap', 'facts__hand-wrap--right')
+    }, 3600);
+    setTimeout(function () {
+        $('.about').addClass('about--custom-cursor');
+    }, 4800);
+}
+
 $(window).on('load', function () {
     setTimeout(function () {
         animateClass('.animate__img--printer', 'animate__img--printer-animated')
@@ -42,6 +62,31 @@ $(window).on('load', function () {
 
     // Анимации блюда и пакетов css-ные находятся внутри svg файлов ( bags.svg  plate.svg )
 
+    var canAnimate = true;
+
+    $(window).on('scroll', function () {
+        if ($(window).width() > '1000') {
+            var scrollTop = $(window).scrollTop();
+            var animateEnableTop = scrollTop + $(window).height() * 0.1;
+            var animateEnableBottom = scrollTop + $(window).height() * 0.6;
+            var blockTop = $('.about').offset().top;
+            var blockBottom = blockTop + $('.about').height();
+            var handHeight = $('.facts__hand-wrap').height();
+
+
+            if ( scrollTop > $('.in-stock').offset().top ){
+                $('.sticky-header').fadeIn();
+            } else {
+                $('.sticky-header').fadeOut();
+            }
+
+            if ( blockTop < animateEnableBottom && canAnimate && blockTop > animateEnableTop ){
+                scanerAnim();
+                canAnimate = false;
+            }
+        }
+    });
+
 });
 
 // Перестройка блоков контента на разных разрешениях
@@ -55,7 +100,7 @@ function MoveBlock() {
 
 $(window).on('load resize', MoveBlock);
 
-$(window).on('scroll', function () {
+/*$(window).on('scroll', function () {
     if ($(window).width() > '1000') {
         var scrollTop = $(window).scrollTop();
         var bottomPosition = scrollTop + $(window).height();
@@ -79,8 +124,4 @@ $(window).on('scroll', function () {
             $('.facts__hand-wrap').removeClass('facts__hand-wrap--screen-fixed');
         }
     }
-});
-
-function animateClass( animatedElement, animationClass ){
-    $(animatedElement).addClass(animationClass);
-}
+});*/

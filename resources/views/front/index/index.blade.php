@@ -148,7 +148,10 @@
     <section class="about">
         <div class="about__facts-wrap facts">
             <div class="facts__hand-wrap">
-                <img src="/img/hand-with-lazer.png" alt="" class="facts__hand-img">
+                <div class="facts__hand">
+                    <img src="/img/hand-with-lazer.png" alt="" class="facts__hand-img">
+                    <img src="/img/laser_on.png" alt="" class="facts__hand-laser-img">
+                </div>
             </div>
             <div class="facts__col-1-2">
                 <h2 class="about__title">О компании</h2>
