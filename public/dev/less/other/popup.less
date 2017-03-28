@@ -81,9 +81,9 @@
     color: #333333;*/
 
     &:hover {
-      .partner-form__validation-wrap {
+      .form-row__validation-wrap {
         &.error {
-          .tooltip-wrap {
+          .form-row__tooltip-wrap {
             display: block;
           }
         }
@@ -109,7 +109,7 @@
       }
       .form-row__input {
         &:focus {
-          & + .tooltip-wrap {
+          & + .form-row__tooltip-wrap {
             z-index: 1;
             display: block;
           }
@@ -153,7 +153,7 @@
     display: none;
     position: absolute;
     z-index: 3;
-    left: 325px;
+    left: 260px;
     top: 50%;
     transform: translateY(-50%);
     max-width: 270px;
@@ -224,6 +224,29 @@
   }
   20%, 40%, 60%, 80% {
     text-indent: 0.75em
+  }
+}
+
+@media screen and (max-width: 810px) {
+  .form-row{
+    &__tooltip-wrap{
+      margin: 0 4px;
+      left: auto;
+      right: 0;
+      top: auto;
+      bottom: ~'calc(100% + 20px)';
+      transform: none;
+      width: auto;
+      max-width: none;
+    }
+
+    &__tooltip{
+      &::before, &::after {
+        bottom: -5px;
+        top: auto;
+        left: ~'calc(50% - 5px)';
+      }
+    }
   }
 }
 
