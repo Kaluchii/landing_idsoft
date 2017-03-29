@@ -17,4 +17,25 @@ class AdminController extends Controller
     public function getIndex(){
         return view('back.layout');
     }
+
+    public function getProducts(){
+        $products = $this->extract->getBlock('products');
+        return view('back.blocks.products', [
+            'products' => $products
+        ]);
+    }
+
+    public function getGuarantee(){
+        $guarantee = $this->extract->getBlock('guarantee');
+        return view('back.blocks.guarantee', [
+            'guarantee' => $guarantee
+        ]);
+    }
+
+    public function getMeta(){
+        $meta = $this->extract->getBlock('products');
+        return view('back.blocks.meta', [
+            'meta' => $meta
+        ]);
+    }
 }

@@ -35,7 +35,13 @@ Route::get('/mail/{popup_name}', function ( $popup_name )
 Route::auth();
 Route::group(['middleware' => 'auth', 'prefix' => 'adm'],function(){
 
-    Route::get('/',         'AdminController@getIndex');
+    Route::get('/',                  'AdminController@getIndex');
+    Route::get('/products',          'AdminController@getProducts');
+    Route::get('/guarantee',         'AdminController@getGuarantee');
+    Route::get('/meta',              'AdminController@getMeta');
+
+
+
     // Таксаномия проекта. Визуальная зависимость данных.
     Route::get('/taxonomy', 'Back\TaxonomyController@showTaxonomy');
 

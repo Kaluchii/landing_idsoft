@@ -3,9 +3,9 @@
 return [
     'fields'=>
         [
-            'seotitle',
-            'seodescription',
-            'seokeywords'
+            'seo_title',
+            'seo_description',
+            'seo_keywords'
         ],
     'owners'=>
         [
