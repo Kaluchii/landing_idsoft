@@ -23,16 +23,16 @@ function scanerAnim() {
     $('.facts__hand-laser-img').addClass('facts__hand-laser-img--on').fadeIn();
     setTimeout(function () {
         animateClass('.facts__hand-wrap', 'facts__hand-wrap--reading')
-    }, 1400);
+    }, 1000);
     setTimeout(function () {
         $('.facts__hand-laser-img').removeClass('facts__hand-laser-img--on').fadeOut();
-    }, 3000);
+    }, 2400);
     setTimeout(function () {
         animateClass('.facts__hand-wrap', 'facts__hand-wrap--right')
-    }, 3600);
+    }, 2600);
     setTimeout(function () {
         $('.about').addClass('about--custom-cursor');
-    }, 4800);
+    }, 2700);
 }
 
 $(window).on('load', function () {

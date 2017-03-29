@@ -62,32 +62,42 @@
             <div class="in-stock__equipments-wrap equipments">
                 <div class="equipments__col">
                     <div class="equipments__item equipment">
-                        <img src="/img/sensor.png" alt="" class="equipment__img">
-                        <p class="equipment__title">Сенсорные моноблоки</p>
+                        <a href="#partner" class="equipment__link  open_feedback">
+                            <img src="/img/sensor.png" alt="" class="equipment__img">
+                            <p class="equipment__title">Сенсорные моноблоки</p>
+                        </a>
                         <p class="equipment__models-count">3 модели</p>
                     </div>
                     <div class="equipments__item equipment">
-                        <img src="/img/skaner-stock.png" alt="" class="equipment__img">
-                        <p class="equipment__title">Сканнеры штрихкода</p>
+                        <a href="#partner" class="equipment__link  open_feedback">
+                            <img src="/img/skaner-stock.png" alt="" class="equipment__img">
+                            <p class="equipment__title">Сканнеры штрихкода</p>
+                        </a>
                         <p class="equipment__models-count">3 модели</p>
                     </div>
                 </div>
                 <div class="equipments__col equipments__col--big">
                     <div class="equipments__item equipment equipment--big">
-                        <img src="/img/pos.jpg" alt="" class="equipment__img">
-                        <p class="equipment__title">POS-системы</p>
+                        <a href="#partner" class="equipment__link  open_feedback">
+                            <img src="/img/pos.jpg" alt="" class="equipment__img">
+                            <p class="equipment__title">POS-системы</p>
+                        </a>
                         <p class="equipment__models-count">3 модели</p>
                     </div>
                 </div>
                 <div class="equipments__col">
                     <div class="equipments__item equipment">
-                        <img src="/img/printer-stock.png" alt="" class="equipment__img">
-                        <p class="equipment__title">Чековые принтеры</p>
+                        <a href="#partner" class="equipment__link  open_feedback">
+                            <img src="/img/printer-stock.png" alt="" class="equipment__img">
+                            <p class="equipment__title">Чековые принтеры</p>
+                        </a>
                         <p class="equipment__models-count">3 модели</p>
                     </div>
                     <div class="equipments__item equipment">
-                        <img src="/img/printer-etiketok.png" alt="" class="equipment__img">
-                        <p class="equipment__title">Принтеры этикеток</p>
+                        <a href="#partner" class="equipment__link  open_feedback">
+                            <img src="/img/printer-etiketok.png" alt="" class="equipment__img">
+                            <p class="equipment__title">Принтеры этикеток</p>
+                        </a>
                         <p class="equipment__models-count">3 модели</p>
                     </div>
                 </div>
