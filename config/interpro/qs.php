@@ -14,7 +14,7 @@ return [
                 'image' => ['slide'],
             ],
             'support' => [
-                'string' => ['title'],
+                'string' => ['text_title'],
                 'text' => ['descr'],
             ]
         ]

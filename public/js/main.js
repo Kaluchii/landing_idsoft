@@ -29,10 +29,10 @@ function scanerAnim() {
     }, 2400);
     setTimeout(function () {
         animateClass('.facts__hand-wrap', 'facts__hand-wrap--right')
-    }, 2600);
+    }, 2800);
     setTimeout(function () {
         $('.about').addClass('about--custom-cursor');
-    }, 2700);
+    }, 3700);
 }
 
 $(window).on('load', function () {

@@ -43,10 +43,15 @@
 
                     <img src="/img/skaner.png" alt="" class="animate__img animate__img--scanner">
                     <img src="/img/printer.png" alt="" class="animate__img animate__img--printer">
-                    <img src="/img/monitor.png" alt="" class="animate__img animate__img--sensor">
+                    {{--<img src="/img/monitor.png" alt="" class="animate__img animate__img--sensor">
                     <img src="/img/on-monitor.png" alt="" class="animate__img animate__img--monitor">
+                    <img src="/img/hand-header.png" alt="" class="animate__img animate__img--hand">--}}
 
-                    <img src="/img/hand-header.png" alt="" class="animate__img animate__img--hand">
+                    <div class="animate__sensor-wrap">
+                        <img src="/img/monitor.png" alt="" class="animate__img animate__img--sensor">
+                        <img src="/img/on-monitor.png" alt="" class="animate__img animate__img--monitor">
+                        <img src="/img/hand-header.png" alt="" class="animate__img animate__img--hand">
+                    </div>
 
                 </div>
             </div>
@@ -58,59 +63,59 @@
         <div class="in-stock__wrap-1160">
             <h2 class="in-stock__title">Оборудование в постоянном наличии</h2>
             <p class="in-stock__sub-title">Все позиции в наличии с собственного склада в Санкт-Петербурге. Без
-                посредников</p>
+                посредников.</p>
             <div class="in-stock__equipments-wrap equipments">
                 <div class="equipments__col">
                     <div class="equipments__item equipment">
                         <a href="#partner" class="equipment__link  open_feedback">
-                            <img src="/img/sensor.png" alt="" class="equipment__img">
-                            <p class="equipment__title">Сенсорные моноблоки</p>
+                            <img src="{{$products->pr1_img_field->link}}" alt="{{$products->pr1_img_field->alt}}" class="equipment__img">
+                            <p class="equipment__title">{{$products->pr1_field}}</p>
                         </a>
-                        <p class="equipment__models-count">3 модели</p>
+                        <p class="equipment__models-count">{{$products->pr1_count_field}}</p>
                     </div>
                     <div class="equipments__item equipment">
                         <a href="#partner" class="equipment__link  open_feedback">
-                            <img src="/img/skaner-stock.png" alt="" class="equipment__img">
-                            <p class="equipment__title">Сканнеры штрихкода</p>
+                            <img src="{{$products->pr2_img_field->link}}" alt="{{$products->pr2_img_field->alt}}" class="equipment__img">
+                            <p class="equipment__title">{{$products->pr2_field}}</p>
                         </a>
-                        <p class="equipment__models-count">3 модели</p>
+                        <p class="equipment__models-count">{{$products->pr2_count_field}}</p>
                     </div>
                 </div>
                 <div class="equipments__col equipments__col--big">
                     <div class="equipments__item equipment equipment--big">
                         <a href="#partner" class="equipment__link  open_feedback">
-                            <img src="/img/pos.jpg" alt="" class="equipment__img">
-                            <p class="equipment__title">POS-системы</p>
+                            <img src="{{$products->pr3_img_field->link}}" alt="{{$products->pr3_img_field->alt}}" class="equipment__img">
+                            <p class="equipment__title">{{$products->pr3_field}}</p>
                         </a>
-                        <p class="equipment__models-count">3 модели</p>
+                        <p class="equipment__models-count">{{$products->pr3_count_field}}</p>
                     </div>
                 </div>
                 <div class="equipments__col">
                     <div class="equipments__item equipment">
                         <a href="#partner" class="equipment__link  open_feedback">
-                            <img src="/img/printer-stock.png" alt="" class="equipment__img">
-                            <p class="equipment__title">Чековые принтеры</p>
+                            <img src="{{$products->pr4_img_field->link}}" alt="{{$products->pr4_img_field->alt}}" class="equipment__img">
+                            <p class="equipment__title">{{$products->pr4_field}}</p>
                         </a>
-                        <p class="equipment__models-count">3 модели</p>
+                        <p class="equipment__models-count">{{$products->pr4_count_field}}</p>
                     </div>
                     <div class="equipments__item equipment">
                         <a href="#partner" class="equipment__link  open_feedback">
-                            <img src="/img/printer-etiketok.png" alt="" class="equipment__img">
-                            <p class="equipment__title">Принтеры этикеток</p>
+                            <img src="{{$products->pr5_img_field->link}}" alt="{{$products->pr5_img_field->alt}}" class="equipment__img">
+                            <p class="equipment__title">{{$products->pr5_field}}</p>
                         </a>
-                        <p class="equipment__models-count">3 модели</p>
+                        <p class="equipment__models-count">{{$products->pr5_count_field}}</p>
                     </div>
                 </div>
             </div>
             <div class="in-stock__offer-wrap">
                 <p class="in-stock__give-commercial-proposal">
-                    <a href="#" class="in-stock__give-commercial-proposal-btn">Получить коммерческое предложение</a>
+                    <a download="{{$products->cp_field->title}}" href="{{$products->cp_field->link}}" class="in-stock__give-commercial-proposal-btn">Получить коммерческое предложение</a>
                 </p>
                 <p class="in-stock__we-will-tell">Мы расскажем об условиях работы,
                     актуальные цены и о прогрессирующих скидках.</p>
             </div>
         </div>
-        <p class="in-stock__popularity">Мы поставляем оборудование 8&nbsp;из&nbsp;10 интеграторов Казахстана</p>
+        <p class="in-stock__popularity">Мы поставляем оборудование 8&nbsp;из&nbsp;10 интеграторам Казахстана</p>
     </section>
 
 
@@ -119,37 +124,18 @@
             <h2 class="guarantee__title">Гарантия и сервис</h2>
             <div class="guarantee__col-1">
                 <div class="fotorama" data-loop="true" data-autoplay="5000">
-                    <img src="/img/slide.jpg" alt="">
-                    <img src="/img/slide.jpg" alt="">
-                    <img src="/img/slide.jpg" alt="">
-                    <img src="/img/slide.jpg" alt="">
-                    <img src="/img/slide.jpg" alt="">
-                    <img src="/img/slide.jpg" alt="">
-                    <img src="/img/slide.jpg" alt="">
-                    <img src="/img/slide.jpg" alt="">
+                    @foreach($guarantee->slider_group as $item)
+                        <img src="{{$item->slide_field->link}}" alt="{{$item->slide_field->alt}}">
+                    @endforeach
                 </div>
             </div>
             <div class="guarantee__col-2 support-info">
-                <div class="support-info__item">
-                    <h3 class="support-info__title">Гарантия до 3х лет</h3>
-                    <p class="support-info__description">Если в работе обнаружился брак, неисправность или сбои, мы
-                        заменим оборудование, заново подключим и проведем настройку бесплатно.
-                    </p>
-                </div>
-                <div class="support-info__item">
-                    <h3 class="support-info__title">Консультации и поддержка</h3>
-                    <p class="support-info__description">Мы гарантируем, что консультации и поддержку дают толковые
-                        специалисты с необходимой квалификацией, а проблемы будут решаться оперативно и без
-                        необязательных задержек.
-                    </p>
-                </div>
-                <div class="support-info__item">
-                    <h3 class="support-info__title">Ремонт</h3>
-                    <p class="support-info__description">Если поломка не попадает под условия гарантии, в наличии
-                        полный арсенал запасных частей для каждой модели оборудования — мы отремонтируем, протестируем и
-                        восстановим работу так быстро, насколько это возможно.
-                    </p>
-                </div>
+                @foreach($guarantee->support_group as $item)
+                    <div class="support-info__item">
+                        <h3 class="support-info__title">{{$item->text_title_field}}</h3>
+                        <p class="support-info__description">{{$item->descr_field}}</p>
+                    </div>
+                @endforeach
             </div>
         </div>
     </section>

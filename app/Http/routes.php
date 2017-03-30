@@ -11,9 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-    return view('front.index.index');
-});
+Route::get('/',                  'FrontController@getIndex');
 
 
 Route::post('/feedback/mail', 'Back\MailController@send');

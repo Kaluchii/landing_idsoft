@@ -2,7 +2,7 @@
   overflow-x: hidden;
 
   &--custom-cursor{
-    cursor: url('/img/cursor.png'), auto;
+    cursor: url('/img/cursore.png'), auto;
   }
 
   &__title{
@@ -51,41 +51,27 @@
   &__hand-wrap{
     display: none;
     position: absolute;
-    top: 90px;
+    top: 60px;
     z-index: 7;
     transform: translateX(30%);
     user-select: none;
 
     min-width: 439px;
-    left: -280px;
+    left: -260px;
 
     &.visible{
       display: block;
     }
 
-    &--screen-fixed{
-      position: fixed;
-      top: ~'calc(100% - 255px)';
-    }
-
-    &--bottom-fixed{
-      position: absolute;
-      top: ~'calc(100% - 255px)';
-    }
-
-    &--left{
-      left: -280px;
-    }
-
     &--reading{
-      left: 300px;
+      left: 350px;
       transition: left 1.4s ease;
     }
 
     &--right{
-      left: 80%;
+      left: 85%;
       top: 190px;
-      transition: left .8s cubic-bezier(0.45, -0.06, 0.69, 0.51), top .8s cubic-bezier(0.39, 0.58, 0.57, 1);
+      transition: left .9s cubic-bezier(0.5,-0.08, 0.56, 0.82), top .8s cubic-bezier(0.39, 0.58, 0.57, 1);
     }
   }
 
@@ -96,8 +82,8 @@
   &__hand-laser-img{
     display: none;
     position: absolute;
-    top: -80px;
-    left: -64px;
+    top: -39px;
+    left: -145px;
     
     &--on{
       /*display: block;*/
