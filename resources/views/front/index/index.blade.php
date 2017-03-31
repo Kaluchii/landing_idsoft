@@ -121,7 +121,7 @@
 
     <section class="guarantee">
         <div class="guarantee__wrap-1280">
-            <h2 class="guarantee__title">Гарантия и сервис</h2>
+            <h2 class="guarantee__title">Гарантия и&nbsp;сервис</h2>
             <div class="guarantee__col-1">
                 <div class="fotorama" data-loop="true" data-autoplay="5000">
                     @foreach($guarantee->slider_group as $item)

@@ -28,7 +28,8 @@
 
     &__img{
       &--pockets{
-        display: none;
+        left: auto;
+        right: 50px;
       }
 
       &--bludo{
@@ -63,7 +64,45 @@
     margin: 50px auto 0;
   }
 
+  .animate{
+    height: 20px;
+
+    &__sensor-wrap{
+      display: none;
+    }
+
+    &__img{
+      &--pockets{
+        bottom: 15px;
+        right: 50%;
+        transform: translateX(50%);
+      }
+    }
+
+    &__img-object{
+      &--pockets{
+        max-width: 454px;
+      }
+    }
+
+    &__img-embed{
+      &--pockets{
+        height: 390px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 470px) {
   .titular{
+    &__wrap-1280{
+      padding: 40px 20px 35px;
+    }
+
+    &__title{
+      padding: 0;
+    }
+
     &__white-bottom{
       display: none;
     }

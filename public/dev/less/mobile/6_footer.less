@@ -2,15 +2,30 @@
   .become {
     &__footer {
       padding: 0 140px 0 130px;
-      margin-top: -50px;
     }
   }
 }
 
 @media screen and (max-width: 1000px) {
   .become {
-    &__img {
+    &__wrap-1280 {
+      background: url("/img/left_border.png") top left / 10% 100% no-repeat,
+      url("/img/right_border.png") top right / 10% 100% no-repeat,
+      url("/img/cardboard.jpg") center repeat-x;
+      padding-bottom: 30px;
+    }
+
+    &__footer {
+      padding: 45px 15% 0 15%;
+      margin-top: 0;
+    }
+
+    &__img-wrap {
       display: none;
+    }
+
+    &__info {
+      margin-top: 5px;
     }
   }
 
@@ -43,18 +58,16 @@
   }
 }
 
-@media screen and (max-width: 730px) {
+@media screen and (max-width: 540px) {
   .become {
-    &__wrap-1280 {
-      background: url("/img/left_border.png") top left / 10% 100% no-repeat,
-                  url("/img/right_border.png") top right / 10% 100% no-repeat,
-                  url("/img/cardboard.jpg") center repeat-x;
-      padding-bottom: 30px;
+    &__footer {
+      flex-wrap: wrap;
     }
 
-    &__footer {
-      padding: 0 10% 0 15%;
-      margin-top: 0;
+    &__col-1-2 {
+      &:last-child {
+        width: 100%;
+      }
     }
   }
 }
@@ -83,7 +96,7 @@
     }
 
     &__footer {
-      padding: 0 15px;
+      padding: 45px 15px 0;
     }
   }
 
