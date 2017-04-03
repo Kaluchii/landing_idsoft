@@ -52,7 +52,7 @@ $(window).on('load', function () {
 
     setTimeout(function () {
         animateClass('.animate__img--monitor', 'animate__img--monitor-animated')
-    }, 3300);
+    }, 3600);
 
 
     setTimeout(function () {
