@@ -152,7 +152,7 @@
             <div class="facts__col-1-2">
                 <h2 class="about__title">О компании</h2>
                 <div class="facts__item fact">
-                    <img src="/img/sqr.jpg" alt="" class="fact__img">
+                    <img src="/img/1a.jpg" alt="" class="fact__img">
                     <h3 class="fact__title">Собственное производство</h3>
                     <p class="fact__description">Мы сами выбираем и заказываем комплектующие с заводов Китая, а сборнкой
                         занимаются квалифицированные и ответственные сотрудники.</p>
@@ -165,13 +165,13 @@
             </div>
             <div class="facts__col-1-2">
                 <div class="facts__item fact">
-                    <img src="/img/sqr.jpg" alt="" class="fact__img">
+                    <img src="/img/2a.jpg" alt="" class="fact__img">
                     <h3 class="fact__title">Опыт интеграции</h3>
                     <p class="fact__description">Мы понимаем особенности автоматизации бизнеса. Это позволяет нам решить
                         многие проблемы еще до того, как они появятся.</p>
                 </div>
                 <div class="facts__item fact">
-                    <img src="/img/sqr.jpg" alt="" class="fact__img">
+                    <img src="/img/3a.jpg" alt="" class="fact__img">
                     <h3 class="fact__title">Лицом к партнерам</h3>
                     <p class="fact__description">Нашим партнерам не нужно выполнять план продаж, дожидаться очереди или
                         заказывать не нужный объем. Мы стремимся к честному и прозрачному сотрудничеству.</p>
