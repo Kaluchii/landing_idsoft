@@ -67,7 +67,7 @@
                     <div class="become__info">
                         <p class="become__info-row">© IDSOFT, 2017</p>
                         <p class="become__info-row">Отдел продаж: <a href="mailto:sales@idsoft.kz" class="become__info-link">sales@idsoft.kz</a></p>
-                        <p class="become__info-row">+7 777 123-45-67</p>
+                        <p class="become__info-row">+7 906 272-26-91</p>
                     </div>
                 </div>
                 <div class="become__col-1-2">
