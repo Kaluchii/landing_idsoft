@@ -1,32 +1,31 @@
 <div class="box">
     <div class="box-header with-border">
-        <h3 class="box-title">Слайд {{$item->sorter_field}}</h3>
+        <h3 class="box-title">Факт {{$item->sorter_field}}</h3>
         <button type="submit" class="btn btn-primary pull-right remove-flat-item" data-id="{{$item->id_field}}"
-                data-block="slider">Удалить
+                data-block="facts">Удалить
         </button>
     </div>
     <div class="box-body">
 
         <div class="form-group">
-            <label>Изображение (700 x 490px)</label>
+            <label>Изображение (380 x 230px)</label>
             <div class="dropzone">
                 <div class="file-input">
                     <div class="file-preview">
                         <div class="input-group file-caption-main">
-
                             <div class="file-preview-frame">
                                 <div class="kv-file-content">
-                                    <img src="{{$item->slide_field->link}}?{{$item->slide_field->cache_index}}" class="kv-preview-data file-preview-image"
-                                         title="{{$item->slide_field->alt}}" alt="{{$item->slide_field->alt}}">
+                                    <img src="{{$item->img_field->link}}?{{$item->img_field->cache_index}}" class="kv-preview-data file-preview-image"
+                                         title="{{$item->img_field->alt}}" alt="{{$item->img_field->alt}}">
                                 </div>
                                 <div class="file-thumbnail-footer">
                                     <div class="file-footer-caption"
-                                         title="{{$item->slide_field->alt}}">{{$item->slide_field->name_field}}
+                                         title="{{$item->img_field->alt}}">{{$item->img_field->name_field}}
                                         <br></div>
                                     <div class="file-actions">
-                                        <input type="text" class="form-control alt-text" data-block="slider"
+                                        <input type="text" class="form-control alt-text" data-block="facts"
                                                data-type="images" data-id="{{$item->id_field}}" data-name="alt"
-                                               value="{{$item->slide_field->alt}}">
+                                               value="{{$item->img_field->alt}}">
                                         <div class="clearfix"></div>
                                     </div>
                                 </div>
@@ -48,12 +47,33 @@
                     <i class="glyphicon glyphicon-folder-open"></i>&nbsp;
                     <span class="hidden-xs">Выбрать изображение …</span>
                     <input type="file" class="form-control file"
-                           data-block="slider"
-                           data-name="slide"
+                           data-block="facts"
+                           data-name="img"
                            data-type="image"
                            data-id="{{$item->id_field}}">
                 </div>
             </div>
         </div>
+
+        <div class="form-group">
+            <label>Заголовок</label>
+            <input class="form-control string"
+                   type="text" placeholder=""
+                   value="{{$item->text_title_field}}"
+                   data-name="text_title"
+                   data-type="string"
+                   data-block="facts"
+                   data-id="{{$item->id_field}}">
+        </div>
+
+        <div class="form-group">
+            <label>Текст описание</label>
+            <textarea class="form-control text"
+                      data-name="descr"
+                      data-type="text"
+                      data-block="facts"
+                      data-id="{{$item->id_field}}">{{$item->descr_field}}</textarea>
+        </div>
+
     </div>
 </div>

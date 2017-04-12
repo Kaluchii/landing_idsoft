@@ -19,4 +19,7 @@ return [
     'slider.slide' => [
         'resizes' => ['preview']
     ],
+    'facts.img' => [
+        'resizes' => ['preview']
+    ],
 ];

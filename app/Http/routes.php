@@ -36,6 +36,7 @@ Route::group(['middleware' => 'auth', 'prefix' => 'adm'],function(){
     Route::get('/',                  'AdminController@getIndex');
     Route::get('/products',          'AdminController@getProducts');
     Route::get('/guarantee',         'AdminController@getGuarantee');
+    Route::get('/about',             'AdminController@getAbout');
     Route::get('/meta',              'AdminController@getMeta');
 
 

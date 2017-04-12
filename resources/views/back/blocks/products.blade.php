@@ -29,7 +29,7 @@
                        data-id="0">
             </div>
             <div class="form-group">
-                <label>Изображение</label>
+                <label>Изображение (250 x 250px)</label>
                 <div class="dropzone">
                     <div class="file-input">
                         <div class="file-preview">
@@ -94,7 +94,7 @@
                        data-id="0">
             </div>
             <div class="form-group">
-                <label>Изображение</label>
+                <label>Изображение (250 x 250px)</label>
                 <div class="dropzone">
                     <div class="file-input">
                         <div class="file-preview">
@@ -159,7 +159,7 @@
                        data-id="0">
             </div>
             <div class="form-group">
-                <label>Изображение</label>
+                <label>Изображение (500 x 500px)</label>
                 <div class="dropzone">
                     <div class="file-input">
                         <div class="file-preview">
@@ -224,7 +224,7 @@
                        data-id="0">
             </div>
             <div class="form-group">
-                <label>Изображение</label>
+                <label>Изображение (250 x 250px)</label>
                 <div class="dropzone">
                     <div class="file-input">
                         <div class="file-preview">
@@ -289,7 +289,7 @@
                        data-id="0">
             </div>
             <div class="form-group">
-                <label>Изображение</label>
+                <label>Изображение (250 x 250px)</label>
                 <div class="dropzone">
                     <div class="file-input">
                         <div class="file-preview">

@@ -32,6 +32,13 @@ class AdminController extends Controller
         ]);
     }
 
+    public function getAbout(){
+        $about = $this->extract->getBlock('about');
+        return view('back.blocks.about', [
+            'about' => $about
+        ]);
+    }
+
     public function getMeta(){
         $meta = $this->extract->getBlock('products');
         return view('back.blocks.meta', [

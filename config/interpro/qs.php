@@ -19,4 +19,14 @@ return [
             ]
         ]
     ],
+
+    'about' => [
+        'groups' => [
+            'facts' => [
+                'image' => ['img'],
+                'string' => ['text_title'],
+                'text' => ['descr'],
+            ]
+        ]
+    ],
 ];

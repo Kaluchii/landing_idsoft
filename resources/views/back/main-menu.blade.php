@@ -17,6 +17,11 @@
                     <i class="fa  fa-file-text-o"></i> <span>Гарантия</span>
                 </a>
             </li>
+            <li>
+                <a href="/adm/about">
+                    <i class="fa  fa-file-text-o"></i> <span>О компании</span>
+                </a>
+            </li>
         </ul>
     </section>
 

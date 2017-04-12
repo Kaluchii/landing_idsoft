@@ -24,6 +24,7 @@ class FrontController extends Controller
         try {
             $products = $this->extract->getBlock('products');
             $guarantee = $this->extract->getBlock('guarantee');
+            $about = $this->extract->getBlock('about');
         }
         catch (Exception $e) {
             abort(404);
@@ -31,6 +32,7 @@ class FrontController extends Controller
         return view('front.index.index', [
             'products' => $products,
             'guarantee' => $guarantee,
+            'about' => $about,
         ]);
     }
 }
