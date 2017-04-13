@@ -12,9 +12,9 @@ class UsersTableSeeder extends Seeder
     public function run()
     {
         \Illuminate\Support\Facades\DB::table('users')->insert([
-            'name' => 'root',
-            'email' => 'admin@admin.kz',
-            'password' => bcrypt('RerfDfcz'),
+            'name' => 'idsoft',
+            'email' => 'sales@idsoft.kz',
+            'password' => bcrypt('24621'),
         ]);
     }
 }
