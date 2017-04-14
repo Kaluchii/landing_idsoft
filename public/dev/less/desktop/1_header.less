@@ -22,17 +22,30 @@
 
   &__logo{
     line-height: 0;
+    flex-shrink: 0;
   }
 
   &__communications{
+    display: flex;
+  }
+
+  &__communication-wrap{
     font-size: 20px;
-    margin-bottom: 5px;
+
+    &:nth-child(n+2){
+      margin-left: 70px;
+    }
+  }
+
+  &__above-text{
+    color: #999999;
+    font-size: 14px;
+    margin-bottom: 2px;
   }
 
   &__phone{
     color: #333333;
     font-size: inherit;
-    margin-right: 40px;
   }
 
   &__mailto{
