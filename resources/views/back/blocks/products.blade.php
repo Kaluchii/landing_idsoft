@@ -18,7 +18,7 @@
                        data-block="products"
                        data-id="0">
             </div>
-            <div class="form-group">
+            {{--<div class="form-group">
                 <label>Количество</label>
                 <input class="form-control string"
                        type="text" placeholder=""
@@ -27,7 +27,7 @@
                        data-type="string"
                        data-block="products"
                        data-id="0">
-            </div>
+            </div>--}}
             <div class="form-group">
                 <label>Изображение (250 x 250px)</label>
                 <div class="dropzone">
@@ -83,7 +83,7 @@
                        data-block="products"
                        data-id="0">
             </div>
-            <div class="form-group">
+            {{--<div class="form-group">
                 <label>Количество</label>
                 <input class="form-control string"
                        type="text" placeholder=""
@@ -92,7 +92,7 @@
                        data-type="string"
                        data-block="products"
                        data-id="0">
-            </div>
+            </div>--}}
             <div class="form-group">
                 <label>Изображение (250 x 250px)</label>
                 <div class="dropzone">
@@ -148,7 +148,7 @@
                        data-block="products"
                        data-id="0">
             </div>
-            <div class="form-group">
+            {{--<div class="form-group">
                 <label>Количество</label>
                 <input class="form-control string"
                        type="text" placeholder=""
@@ -157,7 +157,7 @@
                        data-type="string"
                        data-block="products"
                        data-id="0">
-            </div>
+            </div>--}}
             <div class="form-group">
                 <label>Изображение (500 x 500px)</label>
                 <div class="dropzone">
@@ -213,7 +213,7 @@
                        data-block="products"
                        data-id="0">
             </div>
-            <div class="form-group">
+            {{--<div class="form-group">
                 <label>Количество</label>
                 <input class="form-control string"
                        type="text" placeholder=""
@@ -222,7 +222,7 @@
                        data-type="string"
                        data-block="products"
                        data-id="0">
-            </div>
+            </div>--}}
             <div class="form-group">
                 <label>Изображение (250 x 250px)</label>
                 <div class="dropzone">
@@ -278,7 +278,7 @@
                        data-block="products"
                        data-id="0">
             </div>
-            <div class="form-group">
+            {{--<div class="form-group">
                 <label>Количество</label>
                 <input class="form-control string"
                        type="text" placeholder=""
@@ -287,7 +287,7 @@
                        data-type="string"
                        data-block="products"
                        data-id="0">
-            </div>
+            </div>--}}
             <div class="form-group">
                 <label>Изображение (250 x 250px)</label>
                 <div class="dropzone">

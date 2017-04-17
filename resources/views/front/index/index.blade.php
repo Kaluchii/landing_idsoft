@@ -71,14 +71,14 @@
                             <img src="{{$products->pr1_img_field->link}}" alt="{{$products->pr1_img_field->alt}}" class="equipment__img">
                             <p class="equipment__title">{{$products->pr1_field}}</p>
                         </a>
-                        <p class="equipment__models-count">{{$products->pr1_count_field}}</p>
+                        {{--<p class="equipment__models-count">{{$products->pr1_count_field}}</p>--}}
                     </div>
                     <div class="equipments__item equipment">
                         <a href="#partner" class="equipment__link  open_feedback">
                             <img src="{{$products->pr2_img_field->link}}" alt="{{$products->pr2_img_field->alt}}" class="equipment__img">
                             <p class="equipment__title">{{$products->pr2_field}}</p>
                         </a>
-                        <p class="equipment__models-count">{{$products->pr2_count_field}}</p>
+                        {{--<p class="equipment__models-count">{{$products->pr2_count_field}}</p>--}}
                     </div>
                 </div>
                 <div class="equipments__col equipments__col--big">
@@ -87,7 +87,7 @@
                             <img src="{{$products->pr3_img_field->link}}" alt="{{$products->pr3_img_field->alt}}" class="equipment__img">
                             <p class="equipment__title">{{$products->pr3_field}}</p>
                         </a>
-                        <p class="equipment__models-count">{{$products->pr3_count_field}}</p>
+                        {{--<p class="equipment__models-count">{{$products->pr3_count_field}}</p>--}}
                     </div>
                 </div>
                 <div class="equipments__col">
@@ -96,14 +96,14 @@
                             <img src="{{$products->pr4_img_field->link}}" alt="{{$products->pr4_img_field->alt}}" class="equipment__img">
                             <p class="equipment__title">{{$products->pr4_field}}</p>
                         </a>
-                        <p class="equipment__models-count">{{$products->pr4_count_field}}</p>
+                        {{--<p class="equipment__models-count">{{$products->pr4_count_field}}</p>--}}
                     </div>
                     <div class="equipments__item equipment">
                         <a href="#partner" class="equipment__link  open_feedback">
                             <img src="{{$products->pr5_img_field->link}}" alt="{{$products->pr5_img_field->alt}}" class="equipment__img">
                             <p class="equipment__title">{{$products->pr5_field}}</p>
                         </a>
-                        <p class="equipment__models-count">{{$products->pr5_count_field}}</p>
+                        {{--<p class="equipment__models-count">{{$products->pr5_count_field}}</p>--}}
                     </div>
                 </div>
             </div>
