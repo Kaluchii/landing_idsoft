@@ -49,7 +49,7 @@
                             <span class="partner-form__label">Комментарий</span>
                             <div class="partner-form__validation-wrap">
                                  <textarea name="question" class="partner-form__input form-input form-question partner-form__input--textarea"></textarea>
-                                <div class="tooltip-wrap"><p class="tooltip">Какой бизнес вы хотите автоматизировать</p></div>
+                                <div class="tooltip-wrap"><p class="tooltip">Краткая информация о вашей компании</p></div>
                             </div>
                         </label>
                     </div>

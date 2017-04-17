@@ -47,7 +47,7 @@
                 <span class="form-row__label">Комментарий</span>
                 <div class="form-row__validation-wrap">
                           <textarea name="question" class="form-row__input form-row__input--textarea form-input"></textarea>
-                    <div class="form-row__tooltip-wrap"><p class="form-row__tooltip">Какой бизнес вы хотите автоматизировать</p></div>
+                    <div class="form-row__tooltip-wrap"><p class="form-row__tooltip">Краткая информация о вашей компании</p></div>
                 </div>
             </label>
         </div>

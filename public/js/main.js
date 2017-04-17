@@ -6,6 +6,7 @@ $(document).ready(function () {
         callbacks: {
             beforeOpen: function () {
                 this.st.mainClass = 'mfp-zoom-in';
+                $('.popup-input[type=tel]').mask('+7 (000) 000-00-00')
             }
         },
         midClick: true
@@ -70,9 +71,6 @@ $(window).on('load', function () {
             var animateEnableTop = scrollTop + $(window).height() * 0.1;
             var animateEnableBottom = scrollTop + $(window).height() * 0.6;
             var blockTop = $('.about').offset().top;
-            var blockBottom = blockTop + $('.about').height();
-            var handHeight = $('.facts__hand-wrap').height();
-
 
             if ( scrollTop > $('.in-stock').offset().top ){
                 $('.sticky-header').fadeIn();
@@ -84,6 +82,8 @@ $(window).on('load', function () {
                 scanerAnim();
                 canAnimate = false;
             }
+        } else {
+            $('.sticky-header').hide();
         }
     });
 
@@ -99,29 +99,3 @@ function MoveBlock() {
 }
 
 $(window).on('load resize', MoveBlock);
-
-/*$(window).on('scroll', function () {
-    if ($(window).width() > '1000') {
-        var scrollTop = $(window).scrollTop();
-        var bottomPosition = scrollTop + $(window).height();
-        var blockTop = $('.about').offset().top;
-        var blockBottom = blockTop + $('.about').height();
-        var handHeight = $('.facts__hand-wrap').height();
-
-        if ( scrollTop > $('.in-stock').offset().top ){
-            $('.sticky-header').fadeIn();
-        } else {
-            $('.sticky-header').fadeOut();
-        }
-
-        if ( (bottomPosition > blockTop + handHeight) && (bottomPosition <= blockBottom) ){
-            $('.facts__hand-wrap').addClass('facts__hand-wrap--screen-fixed');
-            $('.facts__hand-wrap').removeClass('facts__hand-wrap--bottom-fixed');
-        }else if ( bottomPosition > $('.become').offset().top - 1 ){
-            $('.facts__hand-wrap').addClass('facts__hand-wrap--bottom-fixed');
-            $('.facts__hand-wrap').removeClass('facts__hand-wrap--screen-fixed');
-        }else {
-            $('.facts__hand-wrap').removeClass('facts__hand-wrap--screen-fixed');
-        }
-    }
-});*/

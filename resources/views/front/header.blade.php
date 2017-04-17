@@ -27,9 +27,18 @@
         <div class="sticky-header__wrap-1180">
             <p class="sticky-header__tagline">IDSOFT — автоматизация торговли и общепита</p>
             <div class="sticky-header__communications">
-                <span class="sticky-header__phone">+7 906 272-26-91</span>
-                <span class="sticky-header__phone">+7 906 272-26-91</span>
-                <a href="mailto:spb@idsoft.info" class="sticky-header__mailto">spb@idsoft.info</a>
+                <div class="sticky-header__communication-wrap">
+                    <p class="sticky-header__above-text">Написать письмо</p>
+                    <a href="mailto:spb@idsoft.info" class="sticky-header__mailto">spb@idsoft.info</a>
+                </div>
+                <div class="sticky-header__communication-wrap">
+                    <p class="sticky-header__above-text">Для России и СНГ</p>
+                    <p class="sticky-header__phone">+7 906 272-26-91</p>
+                </div>
+                <div class="sticky-header__communication-wrap">
+                    <p class="sticky-header__above-text">Для Казахстана и Азии</p>
+                    <p class="sticky-header__phone">+7 906 272-26-91</p>
+                </div>
             </div>
             <div class="sticky-header__become-partner">
                 <a href="/mail/partner" class="sticky-header__become-partner-btn open_feedback open_popup">Стать партнером</a>
