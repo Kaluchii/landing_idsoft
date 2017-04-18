@@ -34,6 +34,30 @@
                           data-block="products"
                           data-id="0">{{$meta->seo_description_field}}</textarea>
             </div>
+            <div class="form-group">
+                <label>Поле для вставки скриптов (перед закрывающим тегом head)</label>
+                <textarea class="form-control text"
+                          data-name="before_head_close"
+                          data-type="text"
+                          data-block="scripts"
+                          data-id="0">{{$scripts->before_head_close_field}}</textarea>
+            </div>
+            <div class="form-group">
+                <label>Поле для вставки скриптов (после открывающего тега body)</label>
+                <textarea class="form-control text"
+                          data-name="after_open"
+                          data-type="text"
+                          data-block="scripts"
+                          data-id="0">{{$scripts->after_open_field}}</textarea>
+            </div>
+            <div class="form-group">
+                <label>Поле для вставки скриптов (перед закрывающим тегом body)</label>
+                <textarea class="form-control text"
+                          data-name="before_close"
+                          data-type="text"
+                          data-block="scripts"
+                          data-id="0">{{$scripts->before_close_field}}</textarea>
+            </div>
             {{--<div class="form-group">
                 <label>СЕО текст (выводится в нижней части страницы)</label>
                 <textarea class="form-control text-editor"

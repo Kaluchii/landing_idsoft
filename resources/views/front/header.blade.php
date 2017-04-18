@@ -15,7 +15,7 @@
                 </div>
                 <div class="header__communication-wrap">
                     <p class="header__above-text">Для Казахстана и Азии</p>
-                    <p class="header__phone">+7 906 272-26-91</p>
+                    <p class="header__phone">+7 747 220-20-00</p>
                 </div>
             </div>
             <div class="header__become-partner">
@@ -37,7 +37,7 @@
                 </div>
                 <div class="sticky-header__communication-wrap">
                     <p class="sticky-header__above-text">Для Казахстана и Азии</p>
-                    <p class="sticky-header__phone">+7 906 272-26-91</p>
+                    <p class="sticky-header__phone">+7 747 220-20-00</p>
                 </div>
             </div>
             <div class="sticky-header__become-partner">

@@ -4,14 +4,17 @@
     <meta charset="UTF-8">
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="shortcut icon" href="" type="image/gif">
+    <link rel="shortcut icon" href="/img/id_fav.gif" type="image/gif">
 
     @include('front.styles')
     @yield('styles')
+    {!! $scripts->before_head_close_field !!}
     @yield('meta')
 
 </head>
 <body>
+    {!! $scripts->after_open_field !!}
+
     @include('front.header')
     @yield('header')
 
@@ -30,5 +33,7 @@
     @include('front.metriks')
     @yield('scripts')
     @yield('metriks')
+
+    {!! $scripts->before_close_field !!}
 </body>
 </html>

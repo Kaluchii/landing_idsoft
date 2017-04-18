@@ -25,6 +25,7 @@ class FrontController extends Controller
             $products = $this->extract->getBlock('products');
             $guarantee = $this->extract->getBlock('guarantee');
             $about = $this->extract->getBlock('about');
+            $scripts = $this->extract->getBlock('scripts');
         }
         catch (Exception $e) {
             abort(404);
@@ -33,6 +34,7 @@ class FrontController extends Controller
             'products' => $products,
             'guarantee' => $guarantee,
             'about' => $about,
+            'scripts' => $scripts,
         ]);
     }
 }

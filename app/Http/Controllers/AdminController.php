@@ -41,8 +41,10 @@ class AdminController extends Controller
 
     public function getMeta(){
         $meta = $this->extract->getBlock('products');
+        $scripts = $this->extract->getBlock('scripts');
         return view('back.blocks.meta', [
-            'meta' => $meta
+            'meta' => $meta,
+            'scripts' => $scripts
         ]);
     }
 }
