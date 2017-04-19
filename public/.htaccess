@@ -14,8 +14,8 @@
     #RewriteRule ^(.*)$ https://%1/$1 [L,R=301]
 
     # Редирект с протокола http на https
-    RewriteCond %{HTTPS} !=on
-    RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [R=301,L]
+    #RewriteCond %{HTTPS} !=on
+    #RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [R=301,L]
 
     # Redirect Trailing Slashes If Not A Folder...
     RewriteCond %{REQUEST_FILENAME} !-d
