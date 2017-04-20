@@ -1,2 +1,7 @@
 User-agent: *
-Disallow:/
+Disallow: /adm
+
+User-agent: Yandex
+Disallow: /adm
+
+Host: http://idsoft.info
