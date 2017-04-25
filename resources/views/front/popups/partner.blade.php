@@ -52,6 +52,9 @@
             </label>
         </div>
 
+        {{--<div class="g-recaptcha" data-sitekey="6LfQkB4UAAAAALooWkHBjpfTAdEGNkonQHsjVtZA"></div>--}}
+        <div class="g-recaptcha" data-sitekey="6Lf8ih4UAAAAAA9pGD5uGaNfdsAPdvLm3LcBdYA8"></div>
+
         <div class="feedback-form__row form-row feedback-form__row--right-flag">
                 <span class="form-row__name">
                     <input type="submit" value="Отправить" class="form-row__send-form send-form">
