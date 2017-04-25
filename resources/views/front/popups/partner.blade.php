@@ -52,7 +52,9 @@
             </label>
         </div>
 
-        <div class="g-recaptcha" data-sitekey="6LcEix4UAAAAAGA2HY6HRiuAJQvDvu-NtXK_pNTv"></div>
+        {{--<div class="feedback-form__row feedback-form__row--recaptcha">
+            <div class="g-recaptcha" data-sitekey="6LcEix4UAAAAAGA2HY6HRiuAJQvDvu-NtXK_pNTv"></div>
+        </div>--}}
 
         <div class="feedback-form__row form-row feedback-form__row--right-flag">
                 <span class="form-row__name">

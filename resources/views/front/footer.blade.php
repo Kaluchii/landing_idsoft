@@ -53,7 +53,9 @@
                             </div>
                         </label>
                     </div>
-                    <div class="g-recaptcha" data-sitekey="6LcEix4UAAAAAGA2HY6HRiuAJQvDvu-NtXK_pNTv"></div>
+                    <div class="partner-form__row partner-form__row--recaptcha">
+                        <div class="g-recaptcha" data-sitekey="6LcEix4UAAAAAGA2HY6HRiuAJQvDvu-NtXK_pNTv"></div>
+                    </div>
                     <div class="partner-form__row partner-form__row--button">
                         <span class="partner-form__row-name">
                             <input type="submit" value="Отправить" class="partner-form__send-form send-form">

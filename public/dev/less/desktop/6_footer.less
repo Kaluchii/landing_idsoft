@@ -1,13 +1,13 @@
 .become {
-  background: url("/img/cardboard.jpg") center repeat-x;
+  background: url("/img/cardboard.jpg") center / auto 100% repeat-x;
 
   &__wrap-1280 {
     max-width: 1280px;
     margin: 0 auto;
     padding: 50px 0;
-    background: url("/img/left_border.png") top left no-repeat,
-    url("/img/right_border.png") top right no-repeat,
-    url("/img/cardboard.jpg") center repeat-x;
+    background: url("/img/left_border.png") top left / auto 100% no-repeat,
+    url("/img/right_border.png") top right / auto 100% no-repeat,
+    url("/img/cardboard.jpg") center / auto 100% repeat-x;
   }
 
   &__title {
@@ -122,6 +122,11 @@
     &--button {
       text-align: right;
       margin-right: 3px;
+      margin-top: 20px;
+    }
+
+    &--recaptcha{
+      padding-left: 3px;
     }
   }
 
