@@ -205,7 +205,6 @@ $(document).ready(function(){
                 grecaptcha.reset();
             }else{
                 active = true;
-                grecaptcha.reset();
             }
 
         }
