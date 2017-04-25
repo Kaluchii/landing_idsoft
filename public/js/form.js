@@ -172,7 +172,6 @@ $(document).ready(function(){
             // Проверка специально для этого сайта
             if (unical == 'become_partner'){
                 validForm = validForm && grecaptcha.getResponse();
-                grecaptcha.reset();
             }
             //////
 
@@ -203,8 +202,10 @@ $(document).ready(function(){
                     $this.removeClass('load');
                 });
 
+                grecaptcha.reset();
             }else{
                 active = true;
+                grecaptcha.reset();
             }
 
         }
