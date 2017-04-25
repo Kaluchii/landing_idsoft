@@ -147,11 +147,6 @@ $(document).ready(function(){
     }
 
 
-    // Отправка запроса на прохождение капчи
-    function capctchaCheck() {
-    }
-
-
     // Сбор данных с формы и формирование объекта
     function addFields( selector, object ){
 
@@ -177,6 +172,7 @@ $(document).ready(function(){
             // Проверка специально для этого сайта
             if (unical == 'become_partner'){
                 validForm = validForm && grecaptcha.getResponse();
+                grecaptcha.reset();
             }
             //////
 
