@@ -183,7 +183,7 @@ $(document).ready(function(){
     var active = true;
     $('.send-form').on('click', sendForm);
 
-    function sendForm() {
+    function sendForm(token) {
         if( active ){
             unical = $(this).closest('.form-id').attr('id');
             active = false;
