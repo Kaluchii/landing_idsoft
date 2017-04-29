@@ -217,9 +217,11 @@ $(document).ready(function(){
 
                 captchaTest.success(function(data){
                     captchaResult = !data.error;
+                    console.log('Captcha success');
                 });
                 captchaTest.error(function(data){
                     captchaResult = false;
+                    console.log('Captcha error');
                 });
             }
 
