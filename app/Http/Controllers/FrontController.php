@@ -15,19 +15,21 @@ use Interpro\Entrance\Contracts\Extract\ExtractAgent;
 class FrontController extends Controller
 {
     private $extract;
-    public function __construct(ExtractAgent $ext){
+
+    public function __construct(ExtractAgent $ext)
+    {
         $this->extract = $ext;
     }
 
 
-    public function getIndex(){
+    public function getIndex()
+    {
         try {
             $products = $this->extract->getBlock('products');
             $guarantee = $this->extract->getBlock('guarantee');
             $about = $this->extract->getBlock('about');
             $scripts = $this->extract->getBlock('scripts');
-        }
-        catch (Exception $e) {
+        } catch (Exception $e) {
             abort(404);
         }
         return view('front.index.index', [
@@ -36,5 +38,21 @@ class FrontController extends Controller
             'about' => $about,
             'scripts' => $scripts,
         ]);
+    }
+
+    public function Captcha()
+    {
+        require_once public_path() . '/recaptcha/src/autoload.php';
+        if (isset($_POST['g-recaptcha-response'])) {
+            $secret = '6Leo9B4UAAAAAPr-dLvrEOB8cZ4cylgDFfxlcC6u';
+            $recaptcha = new \ReCaptcha\ReCaptcha($secret);
+            $resp = $recaptcha->verify($_POST['g-recaptcha-response'], $_SERVER['REMOTE_ADDR']);
+            if ($resp->isSuccess()) {
+                $data['error'] = false;
+            } else {
+                $data['error'] = true;
+            }
+            return json_encode($data);
+        }
     }
 }

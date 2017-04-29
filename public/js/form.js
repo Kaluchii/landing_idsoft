@@ -209,7 +209,7 @@ $(document).ready(function(){
                 var captchaTest = $.ajax(
                     {
                         type: 'POST',
-                        url: '/',
+                        url: '/captcha',
                         dataType: 'json',
                         data: cResponse
                     }

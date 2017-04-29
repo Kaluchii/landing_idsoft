@@ -1,28 +1,6 @@
 @extends('front.layout')
 @include('front.index.meta')
 @section('content')
-
-
-    {{--Разместить по правилам Laravel--}}
-    <?php
-    require_once public_path() . '/recaptcha/src/autoload.php';
-
-
-    if (isset($_POST['g-recaptcha-response']))
-    {
-        $secret = '6Leo9B4UAAAAAPr-dLvrEOB8cZ4cylgDFfxlcC6u';
-        $recaptcha = new \ReCaptcha\ReCaptcha($secret);
-        $resp = $recaptcha->verify($_POST['g-recaptcha-response'], $_SERVER['REMOTE_ADDR']);
-        if ($resp->isSuccess()) {
-            $data['error']=false;
-        } else {
-            $data['error']=true;
-        }
-        return json_encode($data);
-    }
-    ?>
-    {{-----------------------------------------}}
-
     <section class="titular">
         <div class="titular__blue-top">
             <div class="titular__wrap-1280 titular__wrap-1280--background">
