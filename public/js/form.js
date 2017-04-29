@@ -206,31 +206,23 @@ $(document).ready(function(){
 
                 cResponse = {};
                 cResponse['g-recaptcha-response'] = grecaptcha.getResponse();
-                /*var captchaTest = */$.ajax(
+                var captchaTest = $.ajax(
                     {
                         type: 'POST',
                         url: '/captcha',
                         dataType: 'json',
-                        data: cResponse,
-                        success: function (response) {
-                            captchaResult = !response.error;
-                            console.log('Captcha success');
-                        },
-                        error: function (response) {
-                            captchaResult = false;
-                            console.log('Captcha error');
-                        }
+                        data: cResponse
                     }
                 );
 
-                /*captchaTest.success(function(data){
+                captchaTest.success(function(data){
                     captchaResult = !data.error;
                     console.log('Captcha success');
                 });
                 captchaTest.error(function(data){
                     captchaResult = false;
                     console.log('Captcha error');
-                });*/
+                });
             }
 
 
