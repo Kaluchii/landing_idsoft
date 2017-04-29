@@ -204,6 +204,7 @@ $(document).ready(function(){
                 // captchaTest = captchaResult;
                 console.log('Captcha test passed');
 
+                cResponse = {};
                 cResponse['g-recaptcha-response'] = grecaptcha.getResponse();
                 var captchaTest = $.ajax(
                     {
