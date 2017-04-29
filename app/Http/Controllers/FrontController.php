@@ -10,6 +10,7 @@ use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use Illuminate\Foundation\Auth\Access\AuthorizesResources;
 use Illuminate\Support\Facades\Log;
 use Interpro\Entrance\Contracts\Extract\ExtractAgent;
+use ReCaptcha\ReCaptcha;
 
 
 class FrontController extends Controller
@@ -42,10 +43,9 @@ class FrontController extends Controller
 
     public function Captcha()
     {
-        require_once public_path() . '/recaptcha/src/autoload.php';
-        if (isset($_POST['g-recaptcha-response'])) {
+//        if (isset($_POST['g-recaptcha-response'])) {
             $secret = '6Leo9B4UAAAAAPr-dLvrEOB8cZ4cylgDFfxlcC6u';
-            $recaptcha = new \ReCaptcha\ReCaptcha($secret);
+            $recaptcha = new ReCaptcha($secret);
             $resp = $recaptcha->verify($_POST['g-recaptcha-response'], $_SERVER['REMOTE_ADDR']);
             if ($resp->isSuccess()) {
                 $data['error'] = false;
@@ -53,6 +53,6 @@ class FrontController extends Controller
                 $data['error'] = true;
             }
             return json_encode($data);
-        }
+//        }
     }
 }
