@@ -54,12 +54,14 @@
                         </label>
                     </div>
 
-                    <div id="recaptcha" class="g-recaptcha" data-size="invisible" data-sitekey="6Leo9B4UAAAAAG4fjAUWHYaHudbc6SZIDHlTVFso"
-                         data-callback="onSubmitReCaptcha"></div>
+                    {{--<div id="recaptcha" class="g-recaptcha" data-size="invisible" data-sitekey="6Leo9B4UAAAAAG4fjAUWHYaHudbc6SZIDHlTVFso"
+                         data-callback="sendForm"></div>--}}
 
                     <div class="partner-form__row partner-form__row--button">
                         <span class="partner-form__row-name">
-                            <input type="submit" value="Отправить" class="partner-form__send-form send-form">
+                            <input type="submit" value="Отправить" class="g-recaptcha partner-form__send-form"
+                                   id="recaptcha" data-size="invisible" data-sitekey="6Leo9B4UAAAAAG4fjAUWHYaHudbc6SZIDHlTVFso"
+                                   data-callback="sendForm">
                         </span>
                     </div>
                 </form>

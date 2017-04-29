@@ -157,9 +157,9 @@ $(document).ready(function(){
         });
     }
 
-    var captchaResult = false;
+    // var captchaResult = false;
     function onSubmitReCaptcha(token) {
-        console.log('Captcha test passed');
+        /*console.log('Captcha test passed');
 
         cResponse['g-recaptcha-response'] = grecaptcha.getResponse();
         var capchaTest = $.ajax(
@@ -172,26 +172,24 @@ $(document).ready(function(){
         );
 
         capchaTest.success(function(data){
-            if(!data.error){
-                captchaResult = true;
-            }else{
-                captchaResult = false;
-            }
+            captchaResult = !data.error;
         });
         capchaTest.error(function(data){
             captchaResult = false;
-        });
+        });*/
     }
     
 
     var active = true;
-    $('.send-form').on('click',function() {
+    $('.send-form').on('click', sendForm);
+
+    function sendForm() {
         if( active ){
             unical = $(this).closest('.form-id').attr('id');
             active = false;
             var $this = $(this);
             var dataobj = {};
-            captchaTest = true;
+            var captchaResult = true;
 
             var selector = '#'+unical+' .form-input';
             var validForm  = fieldsCheck( selector );
@@ -202,12 +200,30 @@ $(document).ready(function(){
             }
 
             if ( validForm && unical == 'become_partner' ) {
-                grecaptcha.execute();
-                captchaTest = captchaResult;
+                // grecaptcha.execute();
+                // captchaTest = captchaResult;
+                console.log('Captcha test passed');
+
+                cResponse['g-recaptcha-response'] = grecaptcha.getResponse();
+                var captchaTest = $.ajax(
+                    {
+                        type: 'POST',
+                        url: '/',
+                        dataType: 'json',
+                        data: cResponse
+                    }
+                );
+
+                captchaTest.success(function(data){
+                    captchaResult = !data.error;
+                });
+                captchaTest.error(function(data){
+                    captchaResult = false;
+                });
             }
 
 
-            if ( validForm && captchaTest ){
+            if ( validForm && captchaResult ){
                 addFields( selector, dataobj );
 
                 var deferred = $.ajax(
@@ -236,7 +252,7 @@ $(document).ready(function(){
 
                 grecaptcha.reset();
             }else{
-                if (!captchaTest){
+                if (!captchaResult){
                     alert('Проверка не пройдена!');
                     grecaptcha.reset();
                 }
@@ -245,5 +261,5 @@ $(document).ready(function(){
 
         }
 
-    });
+    }
 });
