@@ -157,6 +157,32 @@ $(document).ready(function(){
         });
     }
 
+    var captchaResult = false;
+    function onSubmitReCaptcha(token) {
+        console.log('Captcha test passed');
+
+        cResponse['g-recaptcha-response'] = grecaptcha.getResponse();
+        var capchaTest = $.ajax(
+            {
+                type: 'POST',
+                url: '/',
+                dataType: 'json',
+                data: cResponse
+            }
+        );
+
+        capchaTest.success(function(data){
+            if(!data.error){
+                captchaResult = true;
+            }else{
+                captchaResult = false;
+            }
+        });
+        capchaTest.error(function(data){
+            captchaResult = false;
+        });
+    }
+    
 
     var active = true;
     $('.send-form').on('click',function() {
@@ -165,17 +191,23 @@ $(document).ready(function(){
             active = false;
             var $this = $(this);
             var dataobj = {};
+            captchaTest = true;
 
             var selector = '#'+unical+' .form-input';
             var validForm  = fieldsCheck( selector );
 
-            // Проверка специально для этого сайта
-            if (unical == 'become_partner'){
-                validForm = validForm && grecaptcha.getResponse();
+            // Если попап обратной связи не был открыт, то эта форма не валидна (т.к. отправляет письмо робот)
+            if ( unical == 'partner' && !popupOpen ){
+                validForm = false
             }
-            //////
 
-            if ( validForm ){
+            if ( validForm && unical == 'become_partner' ) {
+                grecaptcha.execute();
+                captchaTest = captchaResult;
+            }
+
+
+            if ( validForm && captchaTest ){
                 addFields( selector, dataobj );
 
                 var deferred = $.ajax(
@@ -204,6 +236,10 @@ $(document).ready(function(){
 
                 grecaptcha.reset();
             }else{
+                if (!captchaTest){
+                    alert('Проверка не пройдена!');
+                    grecaptcha.reset();
+                }
                 active = true;
             }
 

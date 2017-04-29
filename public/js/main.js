@@ -1,3 +1,5 @@
+var popupOpen = false;
+
 $(document).ready(function () {
 
     $('.open_feedback').magnificPopup({
@@ -6,7 +8,8 @@ $(document).ready(function () {
         callbacks: {
             beforeOpen: function () {
                 this.st.mainClass = 'mfp-zoom-in';
-                $('.popup-input[type=tel]').mask('+7 (000) 000-00-00')
+                $('.popup-input[type=tel]').mask('+7 (000) 000-00-00');
+                popupOpen = true;
             }
         },
         midClick: true
