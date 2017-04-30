@@ -200,8 +200,6 @@ $(document).ready(function(){
             }
 
             if ( validForm && unical == 'become_partner' ) {
-                // grecaptcha.execute();
-                // captchaTest = captchaResult;
                 console.log('Captcha test passed');
 
                 cResponse = {};

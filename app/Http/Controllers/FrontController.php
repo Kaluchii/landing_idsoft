@@ -41,12 +41,13 @@ class FrontController extends Controller
         ]);
     }
 
-    public function Captcha()
+    public function Captcha( Request $request )
     {
 //        if (isset($_POST['g-recaptcha-response'])) {
+            $data = $request->all();
             $secret = '6Leo9B4UAAAAAPr-dLvrEOB8cZ4cylgDFfxlcC6u';
             $recaptcha = new ReCaptcha($secret);
-            $resp = $recaptcha->verify($_POST['g-recaptcha-response'], $_SERVER['REMOTE_ADDR']);
+            $resp = $recaptcha->verify($data['g-recaptcha-response'], $_SERVER['REMOTE_ADDR']);
             if ($resp->isSuccess()) {
                 $data['error'] = false;
             } else {
