@@ -208,7 +208,10 @@ $(document).ready(function(){
                         type: 'POST',
                         url: '/captcha',
                         dataType: 'json',
-                        data: cResponse
+                        data: cResponse,
+                        headers: {
+                            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                        }
                     }
                 );
 
@@ -223,10 +226,7 @@ $(document).ready(function(){
                                 type: 'POST',
                                 url: '/feedback/mail',
                                 dataType: 'json',
-                                data: dataobj,
-                                headers: {
-                                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-                                }
+                                data: dataobj
                             }
                         );
 

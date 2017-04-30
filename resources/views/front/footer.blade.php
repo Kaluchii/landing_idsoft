@@ -61,6 +61,7 @@
                         <span class="partner-form__row-name">
                             <input type="submit" value="Отправить" class="g-recaptcha partner-form__send-form send-form"
                                    id="recaptcha" data-size="invisible" data-sitekey="6Leo9B4UAAAAAG4fjAUWHYaHudbc6SZIDHlTVFso"
+                                   {{--id="recaptcha" data-size="invisible" data-sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"--}}
                                    data-callback="sendForm">
                         </span>
                     </div>
