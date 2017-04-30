@@ -48,7 +48,6 @@ class FrontController extends Controller
             $secret = '6Leo9B4UAAAAAPr-dLvrEOB8cZ4cylgDFfxlcC6u';
             $recaptcha = new ReCaptcha($secret);
             $resp = $recaptcha->verify($data['g-recaptcha-response'], $_SERVER['REMOTE_ADDR']);
-        dd($data['g-recaptcha-response']);
             if ($resp->isSuccess()) {
                 $data['error'] = false;
             } else {
