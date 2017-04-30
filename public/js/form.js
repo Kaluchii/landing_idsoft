@@ -189,7 +189,6 @@ $(document).ready(function(){
             active = false;
             var $this = $(this);
             var dataobj = {};
-            var captchaResult = true;
 
             var selector = '#'+unical+' .form-input';
             var validForm  = fieldsCheck( selector );
@@ -214,17 +213,43 @@ $(document).ready(function(){
                 );
 
                 captchaTest.success(function(data){
-                    captchaResult = !data.error;
+                    if (data.error){
+                        alert('Проверка не пройдена!');
+                    }else{
+                        addFields( selector, dataobj );
+
+                        var deferred = $.ajax(
+                            {
+                                type: 'POST',
+                                url: '/feedback/mail',
+                                dataType: 'json',
+                                data: dataobj
+                            }
+                        );
+
+                        $this.addClass('load');
+
+                        deferred.success(function(data){
+                            if(!data.error){
+                                $('.thank').click();
+                                active = true;
+                                clearFields( selector );
+                                $this.removeClass('load');
+                            }
+                        });
+                        deferred.error(function(data){
+                            console.log(data);
+                            $this.removeClass('load');
+                        });
+                    }
                     console.log('Captcha success');
                 });
+
                 captchaTest.error(function(data){
-                    captchaResult = false;
                     console.log('Captcha error');
                 });
-            }
 
-
-            if ( validForm && captchaResult ){
+            }else if ( validForm ){
                 addFields( selector, dataobj );
 
                 var deferred = $.ajax(
@@ -250,13 +275,7 @@ $(document).ready(function(){
                     console.log(data);
                     $this.removeClass('load');
                 });
-
-                grecaptcha.reset();
             }else{
-                if (!captchaResult){
-                    alert('Проверка не пройдена!');
-                    grecaptcha.reset();
-                }
                 active = true;
             }
 
