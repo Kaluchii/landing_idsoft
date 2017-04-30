@@ -223,7 +223,10 @@ $(document).ready(function(){
                                 type: 'POST',
                                 url: '/feedback/mail',
                                 dataType: 'json',
-                                data: dataobj
+                                data: dataobj,
+                                headers: {
+                                    'X-CSRFToken': $('meta[name="token"]').attr('content')
+                                }
                             }
                         );
 
