@@ -225,7 +225,7 @@ $(document).ready(function(){
                                 dataType: 'json',
                                 data: dataobj,
                                 headers: {
-                                    'X-CSRFToken': $('meta[name="token"]').attr('content')
+                                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
                                 }
                             }
                         );
