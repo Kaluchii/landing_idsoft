@@ -218,6 +218,7 @@ $(document).ready(function(){
                 captchaTest.success(function(data){
                     if (data.error){
                         alert('Проверка не пройдена!');
+                        grecaptcha.reset();
                     }else{
                         addFields( selector, dataobj );
 
@@ -249,6 +250,7 @@ $(document).ready(function(){
                 });
 
                 captchaTest.error(function(data){
+                    grecaptcha.reset();
                     console.log('Captcha error');
                 });
 
