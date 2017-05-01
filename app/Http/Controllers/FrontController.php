@@ -45,8 +45,8 @@ class FrontController extends Controller
     {
 //        if (isset($_POST['g-recaptcha-response'])) {
             $data = $request->all();
-//            $secret = '6LevTh8UAAAAANlvzu3qAULpWZFdM3HivGPA8kKe';
-            $secret = '6LeIxAcTAAAAAGG-vFI1TnRWxMZNFuojJ4WifJWe';
+            $secret = '6LevTh8UAAAAANlvzu3qAULpWZFdM3HivGPA8k11';
+//            $secret = '6LeIxAcTAAAAAGG-vFI1TnRWxMZNFuojJ4WifJWe';
             $recaptcha = new ReCaptcha($secret);
             $resp = $recaptcha->verify($data['g-recaptcha-response'], $_SERVER['REMOTE_ADDR']);
             if ($resp->isSuccess()) {
