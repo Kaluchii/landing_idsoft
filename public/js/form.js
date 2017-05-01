@@ -171,6 +171,9 @@ $(document).ready(function(){
     }
 
     window.onSubmitReCaptcha = function (token) {
+        active = false;
+        sendButton.addClass('load');
+
         console.log('Captcha test start');
         var csrfT = {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')};
         var cResponse = {'g-recaptcha-response': grecaptcha.getResponse()};
@@ -201,7 +204,6 @@ $(document).ready(function(){
 
     function finalValidation() {
         if( active ){
-            active = false;
             sendButton = $(this);
             unical = sendButton.closest('.form-id').attr('id');
             selector = '#'+unical+' .form-input';
@@ -210,18 +212,9 @@ $(document).ready(function(){
 
             if ( validForm ){
                 grecaptcha.reset();
-                sendButton.addClass('load');
                 grecaptcha.execute();
-            }else{
-                active = true;
             }
-            buttonActivate();
         }
-    }
-
-    function buttonActivate() {
-        sendButton.removeClass('load');
-        active = true;
     }
 
     $('.send-form').on('click', finalValidation);
