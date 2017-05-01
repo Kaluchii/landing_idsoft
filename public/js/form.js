@@ -209,6 +209,7 @@ $(document).ready(function(){
             var validForm  = fieldsCheck( selector );
 
             if ( validForm ){
+                grecaptcha.reset();
                 sendButton.addClass('load');
                 grecaptcha.execute();
             }else{
@@ -232,11 +233,13 @@ $(document).ready(function(){
                 $('.thank').click();
                 clearFields( selector );
             }
+            sendButton.removeClass('load');
+            active = true;
         });
         response.error(function(data){
             console.log(data);
+            sendButton.removeClass('load');
+            active = true;
         });
-        sendButton.removeClass('load');
-        active = true;
     }
 });

@@ -55,8 +55,8 @@
                     </div>
 
                     <div id="recaptcha" class="g-recaptcha" data-size="invisible"
-                         {{--data-sitekey="6LevTh8UAAAAAPr7TctJNkvXfGyxsyKSdW783c1K"--}}
-                         data-sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"
+                         data-sitekey="6LevTh8UAAAAAPr7TctJNkvXfGyxsyKSdW783c1K"
+                         {{--data-sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"--}}
                          data-callback="onSubmitReCaptcha"></div>
 
                     <div class="partner-form__row partner-form__row--button">
