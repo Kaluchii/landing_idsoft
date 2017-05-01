@@ -39,7 +39,7 @@ $(document).ready(function(){
 
     // Проверка почты на соответствие маске *@*.*
     function isEmail( mail ){
-        regex = /\S+@\S+/igm;
+        var regex = /\S+@\S+/igm;
         return regex.test(mail);
     }
 
@@ -151,140 +151,92 @@ $(document).ready(function(){
     function addFields( selector, object ){
 
         $(selector).each(function () {
-            $this = $(this);
+            var $this = $(this);
 
             object[$this.attr('name')] = $this.val();
         });
     }
 
-    // var captchaResult = false;
-    function onSubmitReCaptcha(token) {
-        /*console.log('Captcha test passed');
-
-        cResponse['g-recaptcha-response'] = grecaptcha.getResponse();
-        var capchaTest = $.ajax(
+    function ajaxDataSend(type, url, data, headers) {
+        headers = headers || {};
+        return $.ajax(
             {
-                type: 'POST',
-                url: '/',
+                type: type,
+                url: url,
                 dataType: 'json',
-                data: cResponse
+                data: data,
+                headers: headers
             }
         );
+    }
+
+    window.onSubmitReCaptcha = function (token) {
+        console.log('Captcha test start');
+        var csrfT = {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')};
+        var cResponse = {'g-recaptcha-response': grecaptcha.getResponse()};
+
+        var capchaTest = ajaxDataSend('POST', '/captcha', cResponse, csrfT);
 
         capchaTest.success(function(data){
-            captchaResult = !data.error;
+            if( data.error ){
+                alert('Проверка не пройдена!');
+                sendButton.removeClass('load');
+                active = true;
+            }else{
+                console.log('CaptchaTest success');
+                sendForm();
+            }
         });
         capchaTest.error(function(data){
-            captchaResult = false;
-        });*/
-    }
-    
+            alert('При отправке сообщения произошла ошибка');
+            console.log('CaptchaTest error');
+            sendButton.removeClass('load');
+            active = true;
+        });
+    };
 
+
+    var unical, sendButton, selector;
     var active = true;
-    $('.send-form').on('click', sendForm);
 
-    function sendForm(token) {
+    function finalValidation() {
         if( active ){
-            unical = $(this).closest('.form-id').attr('id');
             active = false;
-            var $this = $(this);
-            var dataobj = {};
+            sendButton = $(this);
+            unical = sendButton.closest('.form-id').attr('id');
+            selector = '#'+unical+' .form-input';
 
-            var selector = '#'+unical+' .form-input';
             var validForm  = fieldsCheck( selector );
 
-            // Если попап обратной связи не был открыт, то эта форма не валидна (т.к. отправляет письмо робот)
-            if ( unical == 'partner' && !popupOpen ){
-                validForm = false
-            }
-
-            if ( validForm && unical == 'become_partner' ) {
-                console.log('Captcha test passed');
-
-                cResponse = {};
-                cResponse['g-recaptcha-response'] = grecaptcha.getResponse();
-                var captchaTest = $.ajax(
-                    {
-                        type: 'POST',
-                        url: '/captcha',
-                        dataType: 'json',
-                        data: cResponse,
-                        headers: {
-                            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-                        }
-                    }
-                );
-
-                captchaTest.success(function(data){
-                    if (data.error){
-                        alert('Проверка не пройдена!');
-                        grecaptcha.reset();
-                    }else{
-                        addFields( selector, dataobj );
-
-                        var deferred = $.ajax(
-                            {
-                                type: 'POST',
-                                url: '/feedback/mail',
-                                dataType: 'json',
-                                data: dataobj
-                            }
-                        );
-
-                        $this.addClass('load');
-
-                        deferred.success(function(data){
-                            if(!data.error){
-                                $('.thank').click();
-                                active = true;
-                                clearFields( selector );
-                                $this.removeClass('load');
-                            }
-                        });
-                        deferred.error(function(data){
-                            console.log(data);
-                            $this.removeClass('load');
-                        });
-                    }
-                    console.log('Captcha success');
-                });
-
-                captchaTest.error(function(data){
-                    grecaptcha.reset();
-                    console.log('Captcha error');
-                });
-
-            }else if ( validForm ){
-                addFields( selector, dataobj );
-
-                var deferred = $.ajax(
-                    {
-                        type: 'POST',
-                        url: '/feedback/mail',
-                        dataType: 'json',
-                        data: dataobj
-                    }
-                );
-
-                $this.addClass('load');
-
-                deferred.success(function(data){
-                    if(!data.error){
-                        $('.thank').click();
-                        active = true;
-                        clearFields( selector );
-                        $this.removeClass('load');
-                    }
-                });
-                deferred.error(function(data){
-                    console.log(data);
-                    $this.removeClass('load');
-                });
+            if ( validForm ){
+                sendButton.addClass('load');
+                grecaptcha.execute();
             }else{
                 active = true;
             }
-
         }
+    }
 
+    $('.send-form').on('click', finalValidation);
+
+
+    function sendForm() {
+
+        var dataobj = {};
+
+        addFields( selector, dataobj );
+
+        var response = ajaxDataSend('POST', '/feedback/mail', dataobj);
+        response.success(function(data){
+            if(!data.error){
+                $('.thank').click();
+                clearFields( selector );
+            }
+        });
+        response.error(function(data){
+            console.log(data);
+        });
+        sendButton.removeClass('load');
+        active = true;
     }
 });
