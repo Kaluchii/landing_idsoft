@@ -215,8 +215,6 @@ $(document).ready(function(){
             }else{
                 active = true;
             }
-            sendButton.removeClass('load');
-            active = true;
         }
     }
 
