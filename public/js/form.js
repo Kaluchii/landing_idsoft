@@ -215,7 +215,13 @@ $(document).ready(function(){
             }else{
                 active = true;
             }
+            buttonActivate();
         }
+    }
+
+    function buttonActivate() {
+        sendButton.removeClass('load');
+        active = true;
     }
 
     $('.send-form').on('click', finalValidation);
