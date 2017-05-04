@@ -24,7 +24,7 @@ class MailController extends Controller
 
     public function __construct( FeedbackAgent $feedback ){
 
-        $this->from = Session::pull('form_from', 'popup');
+//        $this->from = Session::pull('form_from', 'popup');
 
         $this->feedback = $feedback;
         // Объявляем все шаблоны писем для форм
@@ -43,18 +43,35 @@ class MailController extends Controller
 
             $this->feedback->mail($form, $data);
 
-            if( $this->from == 'popup' )
+            return ['error' => false];
+            /*if( $this->from == 'popup' )
                 return ['error' => false];
             else
-                return redirect('/mail/thank');
+                return redirect('/mail/thank');*/
 
         }catch(\Exception $error){
 
-            if( $this->from == 'popup' )
+            return ['error' => true, 'error'=> $error->getMessage()];
+            /*if( $this->from == 'popup' )
                 return ['error' => true, 'error'=> $error->getMessage()];
             else
-                return redirect('/mail/error');
+                return redirect('/mail/error');*/
         }
+    }
+
+
+    public function Captcha( Request $request )
+    {
+        $data = $request->all();
+        $secret = '6LevTh8UAAAAANlvzu3qAULpWZFdM3HivGPA8kKe';
+        $recaptcha = new ReCaptcha($secret);
+        $resp = $recaptcha->verify($data['g-recaptcha-response'], $_SERVER['REMOTE_ADDR']);
+        if ($resp->isSuccess()) {
+            $data['error'] = false;
+        } else {
+            $data['error'] = true;
+        }
+        return json_encode($data);
     }
 
 }

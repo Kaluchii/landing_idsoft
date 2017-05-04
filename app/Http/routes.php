@@ -17,7 +17,7 @@ Route::post('/captcha',          'FrontController@Captcha');
 
 Route::post('/feedback/mail', 'Back\MailController@send');
 
-Route::get('/mail/{popup_name}', function ( $popup_name )
+/*Route::get('/mail/{popup_name}', function ( $popup_name )
 {
     if( $popup_name != 'thank' && $popup_name != 'error' )
     {
@@ -28,7 +28,7 @@ Route::get('/mail/{popup_name}', function ( $popup_name )
     return view('front.popup_pages.popup', [
         'popup_name' => $popup_name
     ]);
-});
+});*/
 
 
 Route::auth();
