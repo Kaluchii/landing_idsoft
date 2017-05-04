@@ -19,7 +19,7 @@
                 </div>
             </div>
             <div class="header__become-partner">
-                <a href="/mail/partner" class="header__become-partner-btn open_feedback open_popup">Стать партнером</a>
+                <a href="#partner" class="header__become-partner-btn open_feedback open_popup">Стать партнером</a>
             </div>
         </div>
     </header>
@@ -41,7 +41,7 @@
                 </div>
             </div>
             <div class="sticky-header__become-partner">
-                <a href="/mail/partner" class="sticky-header__become-partner-btn open_feedback open_popup">Стать партнером</a>
+                <a href="#partner" class="sticky-header__become-partner-btn open_feedback open_popup">Стать партнером</a>
             </div>
         </div>
     </div>
