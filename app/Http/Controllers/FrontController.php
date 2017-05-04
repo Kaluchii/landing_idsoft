@@ -43,18 +43,15 @@ class FrontController extends Controller
 
     public function Captcha( Request $request )
     {
-//        if (isset($_POST['g-recaptcha-response'])) {
-            $data = $request->all();
-            $secret = '6LevTh8UAAAAANlvzu3qAULpWZFdM3HivGPA8kKe';
-//            $secret = '6LeIxAcTAAAAAGG-vFI1TnRWxMZNFuojJ4WifJWe';
-            $recaptcha = new ReCaptcha($secret);
-            $resp = $recaptcha->verify($data['g-recaptcha-response'], $_SERVER['REMOTE_ADDR']);
-            if ($resp->isSuccess()) {
-                $data['error'] = false;
-            } else {
-                $data['error'] = true;
-            }
-            return json_encode($data);
-//        }
+        $data = $request->all();
+        $secret = '6LevTh8UAAAAANlvzu3qAULpWZFdM3HivGPA8kKe';
+        $recaptcha = new ReCaptcha($secret);
+        $resp = $recaptcha->verify($data['g-recaptcha-response'], $_SERVER['REMOTE_ADDR']);
+        if ($resp->isSuccess()) {
+            $data['error'] = false;
+        } else {
+            $data['error'] = true;
+        }
+        return json_encode($data);
     }
 }

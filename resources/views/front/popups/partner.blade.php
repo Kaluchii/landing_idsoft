@@ -1,6 +1,6 @@
 <div class="white-popup white-popup--box mfp-with-anim mfp-hide form-id" id="partner">
     <h4 class="white-popup__title">Стать партнером</h4>
-    <form action="/feedback/mail" method="POST" name="partner" autocomplete="off"
+    <div {{--action="/feedback/mail" method="POST" name="partner" autocomplete="off"--}}
           class="white-popup__form feedback-form form">
         {{--Передача Названия формы--}}
         <input type="hidden" name="form" class="form-input" value="partner">
@@ -61,5 +61,5 @@
                 <input type="submit" value="Отправить" class="form-row__send-form send-form">
             </span>
         </div>
-    </form>
+    </div>
 </div>
