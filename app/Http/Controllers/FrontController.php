@@ -10,7 +10,6 @@ use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use Illuminate\Foundation\Auth\Access\AuthorizesResources;
 use Illuminate\Support\Facades\Log;
 use Interpro\Entrance\Contracts\Extract\ExtractAgent;
-use ReCaptcha\ReCaptcha;
 
 
 class FrontController extends Controller

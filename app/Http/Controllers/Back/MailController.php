@@ -15,6 +15,7 @@ use Interpro\Core\Contracts\Taxonomy\Taxonomy;
 use Interpro\Entrance\Contracts\Extract\ExtractAgent;
 use Interpro\Extractor\Contracts\Selection\Tuner;
 use Interpro\Feedback\Contracts\FeedbackAgent;
+use ReCaptcha\ReCaptcha;
 
 
 class MailController extends Controller
