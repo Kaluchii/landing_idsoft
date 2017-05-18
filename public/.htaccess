@@ -10,9 +10,9 @@
     #RewriteRule ^(.*)$ https://%1/$1 [R=301,NE,L]
 
     # Редирект с www на без www
-    #RewriteCond %{HTTP_HOST} ^www\.(.*)$
+    RewriteCond %{HTTP_HOST} ^www\.(.*)$
     #RewriteRule ^(.*)$ https://%1/$1 [L,R=301]
-    #RewriteRule ^(.*)$ http://%1/$1 [L,R=301]
+    RewriteRule ^(.*)$ http://%1/$1 [L,R=301]
 
     # Редирект с протокола http на https
     #RewriteCond %{HTTPS} !=on
