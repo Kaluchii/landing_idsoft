@@ -6,20 +6,14 @@
     RewriteEngine On
 
 
-#    #RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
-#    #RewriteRule ^(.*)$ https://%1/$1 [R=301,NE,L]
-#
-#    # Редирект с www на без www
-#    RewriteCond %{HTTP_HOST} ^www\.(.*)$
-#    #RewriteRule ^(.*)$ https://%1/$1 [L,R=301]
-#    RewriteRule ^(.*)$ http://%1/$1 [L,R=301]
-#
-#    # Редирект с протокола http на https
-#    #RewriteCond %{HTTPS} !=on
-#    #RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [R=301,L]
+    # Редирект с www на без www
+    RewriteCond %{HTTP_HOST} ^www\.(.*)$
+    RewriteRule ^(.*)$ https://%1/$1 [L,R=301]
 
+    # Редирект с протокола http на https
     RewriteCond %{SERVER_PORT} !^443$
     RewriteRule .* https://%{SERVER_NAME}%{REQUEST_URI} [R=301,L]
+
 
     # Redirect Trailing Slashes If Not A Folder...
     RewriteCond %{REQUEST_FILENAME} !-d
