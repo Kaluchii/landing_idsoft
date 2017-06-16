@@ -12,6 +12,16 @@ class UsersTableSeeder extends Seeder
     public function run()
     {
         \Illuminate\Support\Facades\DB::table('users')->insert([
+            'name' => 'root',
+            'email' => 'admin@admin.kz',
+            'password' => bcrypt('RerfDfcz'),
+        ]);
+        \Illuminate\Support\Facades\DB::table('users')->insert([
+            'name' => 'Viktor',
+            'email' => 'info@interpro.kz',
+            'password' => bcrypt('interpro.kz'),
+        ]);
+        \Illuminate\Support\Facades\DB::table('users')->insert([
             'name' => 'idsoft',
             'email' => 'sales@idsoft.kz',
             'password' => bcrypt('24621'),

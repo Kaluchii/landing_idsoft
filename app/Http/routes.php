@@ -13,7 +13,7 @@
 
 Route::get('/',                  'FrontController@getIndex');
 Route::post('/captcha',          'FrontController@Captcha');
-
+Route::post('/rating/send', 	 'RatingController@saveRating');
 
 Route::post('/feedback/mail', 'Back\MailController@send');
 

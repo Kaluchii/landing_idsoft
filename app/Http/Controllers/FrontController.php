@@ -11,6 +11,7 @@ use Illuminate\Foundation\Auth\Access\AuthorizesResources;
 use Illuminate\Support\Facades\Log;
 use Interpro\Entrance\Contracts\Extract\ExtractAgent;
 use ReCaptcha\ReCaptcha;
+use App\Rating;
 
 
 class FrontController extends Controller
@@ -26,6 +27,8 @@ class FrontController extends Controller
     public function getIndex()
     {
         try {
+            $rating = new Rating();
+            $rating = $rating->getRatingView('/');
             $products = $this->extract->getBlock('products');
             $guarantee = $this->extract->getBlock('guarantee');
             $about = $this->extract->getBlock('about');
@@ -38,6 +41,7 @@ class FrontController extends Controller
             'guarantee' => $guarantee,
             'about' => $about,
             'scripts' => $scripts,
+            'rating'  => $rating
         ]);
     }
 

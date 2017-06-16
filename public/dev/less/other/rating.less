@@ -1,0 +1,93 @@
+.rating{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  padding-bottom:10px;
+}
+.star-rating-default, .star-rating-default a:hover, .star-rating-default a:active, .star-rating-default a:focus, .star-rating-default .current-rating {
+  background: #FFFFFF url(../img/all_stars.png) left -1100px repeat-x !important;
+}
+.star-rating-default a, .star-rating-default .current-rating {
+  padding: 0 !important;
+  margin: 0 !important;
+  position: absolute;
+  top: 0;
+  left: 0;
+  text-indent: -1000em !important;
+  height: 25px !important;
+  line-height: 25px !important;
+  outline: none;
+  overflow: hidden;
+  border: none;
+}
+.star-rating-default .current-rating {
+  z-index: 1;
+  background: #FFFFFF url(../img/all_stars.png) !important;
+  background-position: left center !important;
+}
+.star-rating-default li.star {
+  padding: 0 !important;
+  margin: 0 !important;
+  background: none !important;
+  display: inline !important;
+  list-style: none;
+}
+.star-rating-default {
+  position: relative;
+  height: 25px !important;
+  overflow: hidden;
+  list-style: none;
+  margin: 6px 0 5px !important;
+  padding: 0 !important;
+  background-position: left top !important;
+}
+span.totalvotes, span.head-reiting {
+  font-size: 14px;
+  color: #666666;
+  padding-left: 5px;
+}
+span.totalvotes, span.head-reiting {
+  font-size: 14px;
+  color: #666666;
+  padding-left: 5px;
+}
+.rating .head-reiting{
+  margin:0 20px;
+  min-width:210px;
+  text-align:right;
+}
+.rating .raiting-star{
+  margin:0 20px;
+  min-width:120px;
+  text-align:center;
+}
+.rating .totalvotes{
+  margin:0 20px;
+  text-align:left;
+  min-width:230px;
+}
+.star-rating-default a:hover, .star-rating-default a:active, .star-rating-default a:focus {
+  background-position: 0 -50px !important;
+  cursor: pointer;
+}
+span.totalvotes:last-child {
+  display: block;
+}
+
+
+@media screen and (max-width: 700px) {
+  .rating {
+    flex-direction: column;
+    padding-bottom: 20px;
+  }
+  .rating .head-reiting {
+    text-align: center;
+  }
+  .rating .raiting-star {
+    padding-left: 0;
+  }
+  .rating .totalvotes {
+    padding-left: 0;
+    text-align: center;
+  }
+}

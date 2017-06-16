@@ -109,7 +109,7 @@
             </div>
             <div class="in-stock__offer-wrap">
                 <p class="in-stock__give-commercial-proposal">
-                    <a download="{{$products->cp_field->title}}" href="{{$products->cp_field->link}}" class="in-stock__give-commercial-proposal-btn">Получить коммерческое предложение</a>
+                    <a download="{{$products->cp_field->title}}" href="{{$products->cp_field->link}}" class="in-stock__give-commercial-proposal-btn">Скачать прайс-лист</a>
                 </p>
                 <p class="in-stock__we-will-tell">Мы расскажем об условиях работы,
                     актуальные цены и о прогрессирующих скидках.</p>
@@ -182,6 +182,40 @@
                     <?php $i++ ?>
                 @endforeach
             </div>
+        </div>
+        <div class="rating">
+            <span class="head-reiting">Оцените нашу страницу</span>
+            <div class="raiting-star">
+                <ul class="star-rating-default" style="width:125px">
+                    <li class="current-rating" style="width:{{$rating['percent']}}%;">{{$rating['middle']}}</li>
+                    <li class="star">
+                        <a class="star-link" data-raiting="1" title="1/5" style="width:20%;z-index:6"
+                           rel="nofollow">1</a>
+                    </li>
+                    <li class="star">
+                        <a class="star-link" data-raiting="2" title="2/5" style="width:40%;z-index:5"
+                           rel="nofollow">2</a>
+                    </li>
+                    <li class="star">
+                        <a class="star-link" data-raiting="3" title="3/5" style="width:60%;z-index:4"
+                           rel="nofollow">3</a>
+                    </li>
+                    <li class="star">
+                        <a class="star-link" data-raiting="4" title="4/5" style="width:80%;z-index:3"
+                           rel="nofollow">4</a>
+                    </li>
+                    <li class="star">
+                        <a class="star-link" data-raiting="5" title="5/5" style="width:100%;z-index:2"
+                           rel="nofollow">5</a>
+                    </li>
+                </ul>
+            </div>
+            <span class="totalvotes" itemprop="aggregateRating" itemscope="itemscope"
+                  itemtype="http://schema.org/AggregateRating">
+                    <meta itemprop="ratingValue" content="{{$rating['middle']}}">Текущий рейтинг — {{$rating['middle']}}
+                    <meta itemprop="bestRating" content="5">
+                    <meta itemprop="ratingCount" content="{{$rating['count']}}"> ({{$rating['count']}} человек)
+            </span>
         </div>
     </section>
 @endsection
